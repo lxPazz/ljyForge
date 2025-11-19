@@ -31,13 +31,13 @@ warnings.filterwarnings('ignore')
 from requests_html import HTMLSession
 
 # TEST_URL = "http://www.gstatic.com/generate_204"
-TEST_URL = "http://www.pinterest.com"
+TEST_URL = "https://api.telegram.org"
 CLASH_API_PORTS = [9090]
 CLASH_API_HOST = "127.0.0.1"
 CLASH_API_SECRET = ""
 TIMEOUT = 1
 MAX_CONCURRENT_TESTS = 100
-LIMIT = 10000 # 最多保留LIMIT个节点
+LIMIT = 20 # 最多保留LIMIT个节点
 CONFIG_FILE = 'clash_config.yaml'
 INPUT = "input" # 从文件中加载代理节点，支持yaml/yml、txt(每条代理链接占一行)
 BAN = ["中国", "China", "CN", "电信", "移动", "联通"]
