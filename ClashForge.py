@@ -2335,6 +2335,8 @@ def work(links,check=False,allowed_types=[],only_check=False):
 
 if __name__ == '__main__':
     links = [
-        "https://mm.mibei77.com/{Y}.{m}/{m}.{d}Clashplz.yaml",
+        "https://clashgithub.com/wp-content/uploads/rss/{Ymd}.yml",
+        "https://www.freeclashnode.com/uploads/{Y}/{m}/0-{Ymd}.yaml",
+        "https://raw.githubusercontent.com/xiaoer8867785/jddy5/main/data/{Y_m_d}/{x}.yaml",
     ]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
