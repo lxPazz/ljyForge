@@ -31,7 +31,74 @@ dns:
     ipcidr:
     - 240.0.0.0/4
     - 0.0.0.0/32
-proxies: []
+proxies:
+- type: vless
+  name: 🇷🇺_RU_俄罗斯
+  server: 81.161.98.228
+  port: 1443
+  uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a
+  network: ws
+  servername: cdn.filterai.ru
+  tls: true
+  ws-opts:
+    path: /websocketpl
+    headers:
+      Host: cdn.filterai.ru
+  client-fingerprint: chrome
+- type: ss
+  name: 美国(yfuye.com免费节点)_24
+  server: beesyar.org
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 4a2rfixophdjffa8KVA4Aa
+- type: vless
+  name: 加拿大(yfuye.com免费节点)
+  server: 205.233.181.240
+  port: 2096
+  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
+  skip-cert-verify: true
+  udp: true
+  tls: true
+  network: ws
+  servername: cmedget.cecd.top
+  ws-opts:
+    path: X@节点狂魔/?ed=2560
+    headers:
+      host: cmedget.cecd.top
+- type: vless
+  name: 美国(yfuye.com免费节点)_41
+  server: 62.72.166.240
+  port: 2096
+  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
+  skip-cert-verify: true
+  udp: true
+  tls: true
+  network: ws
+  servername: cmedget.cecd.top
+  ws-opts:
+    path: X@节点狂魔/?ed=2560
+    headers:
+      host: cmedget.cecd.top
+- type: vless
+  name: 英国(yfuye.com免费节点)_2
+  server: 77.75.199.240
+  port: 2096
+  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
+  skip-cert-verify: true
+  udp: true
+  tls: true
+  network: ws
+  servername: cmedget.cecd.top
+  ws-opts:
+    path: X@节点狂魔/?ed=2560
+    headers:
+      host: cmedget.cecd.top
+- type: ss
+  name: 🇺🇸_US_美国_8-4Wy1
+  server: 23.95.75.146
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
 proxy-groups:
 - name: 节点选择
   type: select
@@ -43,19 +110,37 @@ proxy-groups:
 - name: 自动选择
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
-  proxies: []
+  proxies:
+  - 美国(yfuye.com免费节点)_24
+  - 英国(yfuye.com免费节点)_2
+  - 加拿大(yfuye.com免费节点)
+  - 美国(yfuye.com免费节点)_41
+  - 🇺🇸_US_美国_8-4Wy1
+  - 🇷🇺_RU_俄罗斯
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
 - name: 故障转移
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
-  proxies: []
+  proxies:
+  - 美国(yfuye.com免费节点)_24
+  - 英国(yfuye.com免费节点)_2
+  - 加拿大(yfuye.com免费节点)
+  - 美国(yfuye.com免费节点)_41
+  - 🇺🇸_US_美国_8-4Wy1
+  - 🇷🇺_RU_俄罗斯
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
-  proxies: []
+  proxies:
+  - 美国(yfuye.com免费节点)_24
+  - 英国(yfuye.com免费节点)_2
+  - 加拿大(yfuye.com免费节点)
+  - 美国(yfuye.com免费节点)_41
+  - 🇺🇸_US_美国_8-4Wy1
+  - 🇷🇺_RU_俄罗斯
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
