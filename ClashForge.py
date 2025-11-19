@@ -1575,29 +1575,33 @@ def generate_clash_config(links,load_nodes):
 
 
     for link in links:
-        if link.startswith(("hysteria2://", "hy2://","trojan://", "ss://", "vless://", "vmess://")):
-            node = parse_proxy_link(link)
-            resolve_name_conflicts(node)
-        else:
-            if '|links' in link or '.md' in link:
-                link = link.replace('|links', '')
-                new_links = parse_md_link(link)
-                handle_links(new_links,resolve_name_conflicts)
-            if '|ss' in link:
-                link = link.replace('|ss', '')
-                new_links = parse_ss_sub(link)
-                for node in new_links:
-                    resolve_name_conflicts(node)
-            if '{' in link:
-                link = resolve_template_url(link)
-            print(f'当前正在处理link: {link}')
-            # 处理非特定协议的链接
-            new_links,isyaml = process_url(link)
-            if isyaml:
-                for node in new_links:
-                    resolve_name_conflicts(node)
+        try:
+            if link.startswith(("hysteria2://", "hy2://","trojan://", "ss://", "vless://", "vmess://")):
+                node = parse_proxy_link(link)
+                resolve_name_conflicts(node)
             else:
-                handle_links(new_links, resolve_name_conflicts)
+                if '|links' in link or '.md' in link:
+                    link = link.replace('|links', '')
+                    new_links = parse_md_link(link)
+                    handle_links(new_links,resolve_name_conflicts)
+                if '|ss' in link:
+                    link = link.replace('|ss', '')
+                    new_links = parse_ss_sub(link)
+                    for node in new_links:
+                        resolve_name_conflicts(node)
+                if '{' in link:
+                    link = resolve_template_url(link)
+                print(f'当前正在处理link: {link}')
+                # 处理非特定协议的链接
+                new_links,isyaml = process_url(link)
+                if isyaml:
+                    for node in new_links:
+                        resolve_name_conflicts(node)
+                else:
+                    handle_links(new_links, resolve_name_conflicts)
+        except Exception as e:
+            print(f"处理链接时出错，已跳过: {link}，错误信息: {e}")
+            continue
 
     final_nodes = deduplicate_proxies(final_nodes)
 
@@ -2331,6 +2335,57 @@ def work(links,check=False,allowed_types=[],only_check=False):
 
 if __name__ == '__main__':
     links = [
-        'https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml'
+        "https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml",
+        "https://raw.githubusercontent.com/Roywaller/clash_subscription/refs/heads/main/clash_subscription.txt",
+        "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc0.yaml",
+        "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc1.yaml",
+        "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc2.yaml",
+        "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc3.yaml",
+        "https://raw.githubusercontent.com/Q3dlaXpoaQ/V2rayN_Clash_Node_Getter/refs/heads/main/APIs/sc4.yaml",
+        "https://raw.githubusercontent.com/xiaoji235/airport-free/refs/heads/main/clash/naidounode.txt",
+        "https://raw.githubusercontent.com/xiaoer8867785/jddy5/refs/heads/main/data/{Y_m_d}/{x}.yaml",
+        "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/LogInfo.txt|links",
+        "https://raw.githubusercontent.com/tglaoshiji/nodeshare/refs/heads/main/{Y}/{m}/{Ymd}.yaml",
+        "https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml",
+        "https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml",
+        "https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml",
+        "https://raw.githubusercontent.com/wangyingbo/yb_clashgithub_sub/main/clash_sub.yml",
+        "https://raw.githubusercontent.com/ljlfct01/ljlfct01.github.io/refs/heads/main/节点",
+        "https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta.yaml",
+        "https://raw.githubusercontent.com/leetomlee123/freenode/refs/heads/main/README.md",
+        "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml",
+        "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+        "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml",
+        "https://raw.githubusercontent.com/skka3134/test/refs/heads/main/clash.yaml|links",
+        "https://raw.githubusercontent.com/mgit0001/test_clash/refs/heads/main/heima.txt",
+        "https://raw.githubusercontent.com/mai19950/clashgithub_com/refs/heads/main/site",
+        "https://raw.githubusercontent.com/aiboboxx/clashfree/refs/heads/main/clash.yml",
+        "https://raw.githubusercontent.com/aiboboxx/v2rayfree/refs/heads/main/README.md",
+        "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
+        "https://raw.githubusercontent.com/shahidbhutta/Clash/refs/heads/main/Router",
+        "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml",
+        "https://raw.githubusercontent.com/skka3134/test/refs/heads/main/test.yaml",
+        "https://raw.githubusercontent.com/anaer/Sub/refs/heads/main/clash.yaml",
+        "https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml",
+        "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml",
+        "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml",
+        "https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml",
+        "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
+        "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash",
+        "https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml",
+        "https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml",
+        "https://api.mxlweb.xyz/sub?target=clash&url=https://www.xrayvip.com/free.yaml&insert=false",
+        "https://api.mxlweb.xyz/sub?target=clash&url=https://mxlsub.me/free&insert=false",
+        "https://www.freeclashnode.com/uploads/{Y}/{m}/0-{Ymd}.yaml",
+        "https://www.freeclashnode.com/uploads/{Y}/{m}/1-{Ymd}.yaml",
+        "https://clashgithub.com/wp-content/uploads/rss/{Ymd}.yml",
+        "https://sub.reajason.eu.org/clash.yaml",
+        "https://clash.221207.xyz/pubclashyaml",
+        "https://clash.llleman.com/clach.yml",
+        "https://proxypool.link/trojan/sub",
+        "https://proxypool.link/ss/sub|ss",
+        "https://proxypool.link/vmess/sub",
+        "https://mxlsub.me/newfull",
+        "https://igdux.top/5Hna",
     ]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
