@@ -32,26 +32,18 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
+- type: hysteria2
+  name: US
+  server: 74.48.56.139
+  port: 30102
+  password: 338ce171-d764-4610-8fd5-6688b0d321f0
+  skip-cert-verify: true
 - type: ss
   name: 🇺🇸_US_美国
   server: 23.95.75.146
   port: 443
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
-- type: vless
-  name: 🇸🇦_SA_沙特阿拉伯_1
-  server: 77.110.101.240
-  port: 443
-  uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
-  network: tcp
-  servername: kinopoisk.ru
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: 4Y3V5AIralE3HIAYXCe3beUGsUiBei0mCmbhPXGAgHg
-    short-id: 2fc1abafec7cb87b
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
 - type: vless
   name: 伊朗
   server: 213.176.16.74
@@ -67,7 +59,7 @@ proxies:
   client-fingerprint: chrome
   flow: xtls-rprx-vision
 - type: ss
-  name: 美国节点_1 (557ms)
+  name: 美国节点_1 (515ms)
   server: 81.90.29.126
   port: 53672
   cipher: chacha20-ietf-poly1305
@@ -90,11 +82,11 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (557ms)
-  - 🇸🇦_SA_沙特阿拉伯_1
+  - 美国节点_1 (515ms)
+  - US
+  - 美国
   - 伊朗
   - 🇺🇸_US_美国
-  - 美国
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -102,21 +94,21 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (557ms)
-  - 🇸🇦_SA_沙特阿拉伯_1
+  - 美国节点_1 (515ms)
+  - US
+  - 美国
   - 伊朗
   - 🇺🇸_US_美国
-  - 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国节点_1 (557ms)
-  - 🇸🇦_SA_沙特阿拉伯_1
+  - 美国节点_1 (515ms)
+  - US
+  - 美国
   - 伊朗
   - 🇺🇸_US_美国
-  - 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
