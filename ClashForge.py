@@ -2089,7 +2089,41 @@ async def test_group_proxies(clash_api: ClashAPI, proxies: List[str]) -> List[Pr
         print(f"\r进度: {done}/{total} ({done / total * 100:.1f}%)", end="", flush=True)
 
     return results
+    
+async def test_proxy_multiple_times(clash_api: ClashAPI, proxy_name: str, times: int = 3) -> Optional[float]:
+    """对单个代理连续测延迟 N 次，任意一次失败则返回 None，否则返回平均延迟"""
+    delays = []
+    for i in range(times):
+        try:
+            result = await clash_api.test_proxy_delay(proxy_name)
+            if not result.is_valid:
+                return None
+            delays.append(result.delay)
+        except Exception:
+            return None
+    return sum(delays) / len(delays)
 
+async def safe_test_proxy(clash_api: ClashAPI, name: str, times: int = 3) -> Tuple[str, Optional[float]]:
+    avg_delay = await test_proxy_multiple_times(clash_api, name, times)
+    return name, avg_delay
+
+async def test_group_proxies_robust(clash_api: ClashAPI, proxies: List[str], times: int = 3) -> List[ProxyTestResult]:
+    """测试一组代理，每个测 3 次，仅保留全成功的节点，并返回 ProxyTestResult（含平均延迟）"""
+    print(f"开始对 {len(proxies)} 个节点进行 {times} 轮延迟测试（仅全成功者保留）...")
+    tasks = [safe_test_proxy(clash_api, name, times) for name in proxies]
+    results = []
+    done = 0
+    total = len(tasks)
+    for coro in asyncio.as_completed(tasks):
+        name, avg_delay = await coro
+        done += 1
+        if avg_delay is not None:
+            results.append(ProxyTestResult(name, avg_delay))
+        else:
+            print(f"\n节点 {name} 在 {times} 次测试中存在失败，已剔除")
+        print(f"\r进度: {done}/{total} ({done/total*100:.1f}%)", end="", flush=True)
+    print()
+    return results
 async def proxy_clean():
     # 更新全局配置
     global MAX_CONCURRENT_TESTS, TIMEOUT, CLASH_API_SECRET, LIMIT, CONFIG_FILE
@@ -2140,7 +2174,8 @@ async def proxy_clean():
                 print(f"策略组 '{group_name}' 中没有代理节点")
             else:
                 # 测试该组的所有节点
-                results = await test_group_proxies(clash_api, proxies)
+                #results = await test_group_proxies(clash_api, proxies)
+                results = await test_group_proxies_robust(clash_api, proxies, times=3)
                 all_test_results.extend(results)
                 # 打印测试结果摘要
                 print_test_summary(group_name, results)
