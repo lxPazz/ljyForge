@@ -2175,7 +2175,7 @@ async def proxy_clean():
             else:
                 # 测试该组的所有节点
                 #results = await test_group_proxies(clash_api, proxies)
-                results = await test_group_proxies_robust(clash_api, proxies, times=3)
+                results = await test_group_proxies_robust(clash_api, proxies, times=5)
                 all_test_results.extend(results)
                 # 打印测试结果摘要
                 print_test_summary(group_name, results)
@@ -2394,5 +2394,6 @@ if __name__ == '__main__':
         "https://free.datiya.com/uploads/{Ymd}-clash.yaml",
         "https://node.clash-x.com/uploads/{Y}/{m}/0-{Ymd}.yaml"
         "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml",
+        "http://wanzhuanmi.cczzuu.top/node/{Ymd}-clash.yaml"
     ]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
