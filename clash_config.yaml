@@ -32,26 +32,70 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
+- type: vless
+  name: 日本节点
+  server: 47.245.38.111
+  port: 443
+  uuid: 86b414b6-966e-4f6d-ab16-32049ef732d3
+  network: tcp
+  servername: www.autodesk.com
+  tls: true
+  encryption: none
+  reality-opts:
+    public-key: y167aJhpgWWjltY4UCir_uu8Mj__Hkc1W4etD0QXYH4
+    short-id: 860705e716cbe6ed
+  client-fingerprint: chrome
+- type: vless
+  name: 日本节点_1
+  server: 150.230.107.25
+  port: 8443
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  network: ws
+  servername: gaosir.unfeeling.sbs
+  tls: true
+  encryption: none
+  ws-opts:
+    path: Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: gaosir.unfeeling.sbs
+- type: vless
+  name: 日本节点_2
+  server: 150.230.214.172
+  port: 16957
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  network: ws
+  servername: gaosir.unfeeling.sbs
+  tls: true
+  encryption: none
+  ws-opts:
+    path: Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: gaosir.unfeeling.sbs
+- type: vless
+  name: 香港节点_2
+  server: 36.50.90.241
+  port: 47790
+  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
+  network: ws
+  servername: cmedget.cecd.top
+  tls: true
+  encryption: none
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: cmedget.cecd.top
+- type: hysteria2
+  name: US
+  server: 74.48.56.139
+  port: 30102
+  password: 338ce171-d764-4610-8fd5-6688b0d321f0
+  skip-cert-verify: true
 - type: ss
   name: 🇺🇸_US_美国
   server: 23.95.75.146
   port: 443
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
-- type: vless
-  name: 🇸🇦_SA_沙特阿拉伯_1
-  server: 77.110.101.240
-  port: 443
-  uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
-  network: tcp
-  servername: kinopoisk.ru
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: 4Y3V5AIralE3HIAYXCe3beUGsUiBei0mCmbhPXGAgHg
-    short-id: 2fc1abafec7cb87b
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
 - type: hysteria2
   name: 法国节点丨yoyapai.com
   server: 163.172.21.105
@@ -74,17 +118,66 @@ proxies:
   client-fingerprint: chrome
   flow: xtls-rprx-vision
 - type: ss
-  name: 美国节点_1 (494ms)
+  name: 美国节点_1
   server: 81.90.29.126
   port: 53672
   cipher: chacha20-ietf-poly1305
   password: yprgZbB7xDL4PSvE4wJU4m
+- type: trojan
+  name: 新加坡节点_1
+  server: 116.49.237.130
+  port: 2673
+  password: BxceQaOe
+  network: tcp
+  sni: t.me/ripaojiedian
+  skip-cert-verify: true
+  tls: true
 - type: hysteria2
-  name: 美国
+  name: 美国 (63ms)
   server: 51.81.223.22
   port: 30102
   password: 338ce171-d764-4610-8fd5-6688b0d321f0
   skip-cert-verify: true
+- type: vless
+  name: 日本节点_3
+  server: 131.186.63.89
+  port: 11655
+  uuid: f61a4285-7264-4d07-9408-7b9ba1922c26
+  network: ws
+  servername: gaosir.unfeeling.sbs
+  tls: true
+  encryption: none
+  ws-opts:
+    path: Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: gaosir.unfeeling.sbs
+- type: ss
+  name: 美国节点丨yoyapai.com_3
+  server: 213.159.66.206
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
+- name: 🇯🇵 日本
+  server: 153.121.65.212
+  port: 5156
+  type: trojan
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡
+  server: 160.16.117.182
+  port: 2760
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡2
+  server: 153.121.73.102
+  port: 127
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - type: trojan
   name: 🇺🇸_US_美国_4
   server: 104.25.254.4
@@ -134,16 +227,26 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (494ms)
-  - 🇺🇸_US_美国_7
-  - 🇩🇪_DE_德国_1
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 美国
-  - 🇩🇪_DE_德国
-  - 🇺🇸_US_美国
+  - 美国 (63ms)
   - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国_4
+  - 🇩🇪_DE_德国_1
+  - 🇺🇸_US_美国_7
+  - 美国节点_1
+  - 🇺🇸_US_美国
+  - 伊朗
+  - 日本节点_3
+  - 日本节点_2
+  - 日本节点_1
+  - 🇯🇵 日本
+  - 🇩🇪_DE_德国
+  - 美国节点丨yoyapai.com_3
+  - 🇸🇬 新加坡
+  - 🇸🇬 新加坡2
+  - 新加坡节点_1
+  - 香港节点_2
+  - US
+  - 日本节点
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -151,31 +254,51 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (494ms)
-  - 🇺🇸_US_美国_7
-  - 🇩🇪_DE_德国_1
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 美国
-  - 🇩🇪_DE_德国
-  - 🇺🇸_US_美国
+  - 美国 (63ms)
   - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国_4
+  - 🇩🇪_DE_德国_1
+  - 🇺🇸_US_美国_7
+  - 美国节点_1
+  - 🇺🇸_US_美国
+  - 伊朗
+  - 日本节点_3
+  - 日本节点_2
+  - 日本节点_1
+  - 🇯🇵 日本
+  - 🇩🇪_DE_德国
+  - 美国节点丨yoyapai.com_3
+  - 🇸🇬 新加坡
+  - 🇸🇬 新加坡2
+  - 新加坡节点_1
+  - 香港节点_2
+  - US
+  - 日本节点
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国节点_1 (494ms)
-  - 🇺🇸_US_美国_7
-  - 🇩🇪_DE_德国_1
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 美国
-  - 🇩🇪_DE_德国
-  - 🇺🇸_US_美国
+  - 美国 (63ms)
   - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国_4
+  - 🇩🇪_DE_德国_1
+  - 🇺🇸_US_美国_7
+  - 美国节点_1
+  - 🇺🇸_US_美国
+  - 伊朗
+  - 日本节点_3
+  - 日本节点_2
+  - 日本节点_1
+  - 🇯🇵 日本
+  - 🇩🇪_DE_德国
+  - 美国节点丨yoyapai.com_3
+  - 🇸🇬 新加坡
+  - 🇸🇬 新加坡2
+  - 新加坡节点_1
+  - 香港节点_2
+  - US
+  - 日本节点
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
