@@ -2165,7 +2165,27 @@ async def proxy_clean():
 
             if LIMIT:
                 config.keep_proxies_by_limit(proxy_names)
-
+            # >>> 新增：将延迟最低的节点重命名为 "名称 (XXms)"
+            valid_results = [r for r in all_test_results if r.is_valid]
+            if valid_results:
+                fastest = min(valid_results, key=lambda x: x.delay)
+                old_name = fastest.name
+                new_name = f"{old_name} ({fastest.delay:.0f}ms)"
+            
+                # 更新 proxies 中的 name
+                for proxy in config.config["proxies"]:
+                    if proxy["name"] == old_name:
+                        proxy["name"] = new_name
+                        break
+            
+                # 更新所有 proxy-groups 中的引用
+                for group in config.config["proxy-groups"]:
+                    if "proxies" in group:
+                        group["proxies"] = [
+                            new_name if p == old_name else p
+                            for p in group["proxies"]
+                        ]
+            # <<< 新增结束
             # 保存更新后的配置
             config.save()
 
