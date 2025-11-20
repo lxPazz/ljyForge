@@ -32,73 +32,52 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- type: vless
-  name: 🇷🇺_RU_俄罗斯
-  server: 81.161.98.228
-  port: 1443
-  uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a
-  network: ws
-  servername: cdn.filterai.ru
-  tls: true
-  ws-opts:
-    path: /websocketpl
-    headers:
-      Host: cdn.filterai.ru
-  client-fingerprint: chrome
 - type: ss
-  name: 美国(yfuye.com免费节点)_24
-  server: beesyar.org
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 4a2rfixophdjffa8KVA4Aa
-- type: vless
-  name: 加拿大(yfuye.com免费节点)
-  server: 205.233.181.240
-  port: 2096
-  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
-  skip-cert-verify: true
-  udp: true
-  tls: true
-  network: ws
-  servername: cmedget.cecd.top
-  ws-opts:
-    path: X@节点狂魔/?ed=2560
-    headers:
-      host: cmedget.cecd.top
-- type: vless
-  name: 美国(yfuye.com免费节点)_41
-  server: 62.72.166.240
-  port: 2096
-  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
-  skip-cert-verify: true
-  udp: true
-  tls: true
-  network: ws
-  servername: cmedget.cecd.top
-  ws-opts:
-    path: X@节点狂魔/?ed=2560
-    headers:
-      host: cmedget.cecd.top
-- type: vless
-  name: 英国(yfuye.com免费节点)_2
-  server: 77.75.199.240
-  port: 2096
-  uuid: 9f70b695-3579-438c-a2c7-b248ddd03656
-  skip-cert-verify: true
-  udp: true
-  tls: true
-  network: ws
-  servername: cmedget.cecd.top
-  ws-opts:
-    path: X@节点狂魔/?ed=2560
-    headers:
-      host: cmedget.cecd.top
-- type: ss
-  name: 🇺🇸_US_美国_8-4Wy1
+  name: 🇺🇸_US_美国
   server: 23.95.75.146
   port: 443
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
+- type: vless
+  name: 🇸🇦_SA_沙特阿拉伯_1
+  server: 77.110.101.240
+  port: 443
+  uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
+  network: tcp
+  servername: kinopoisk.ru
+  tls: true
+  encryption: none
+  reality-opts:
+    public-key: 4Y3V5AIralE3HIAYXCe3beUGsUiBei0mCmbhPXGAgHg
+    short-id: 2fc1abafec7cb87b
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- type: vless
+  name: 伊朗
+  server: 213.176.16.74
+  port: 443
+  uuid: d7fbe279896e40118c23d15fe537dddd
+  network: tcp
+  servername: apple.com
+  tls: true
+  encryption: none
+  reality-opts:
+    public-key: XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc
+    short-id: aabbccdd
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- type: ss
+  name: 美国节点_1 (557ms)
+  server: 81.90.29.126
+  port: 53672
+  cipher: chacha20-ietf-poly1305
+  password: yprgZbB7xDL4PSvE4wJU4m
+- type: hysteria2
+  name: 美国
+  server: 51.81.223.22
+  port: 30102
+  password: 338ce171-d764-4610-8fd5-6688b0d321f0
+  skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
   type: select
@@ -111,12 +90,11 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yfuye.com免费节点)_24
-  - 英国(yfuye.com免费节点)_2
-  - 加拿大(yfuye.com免费节点)
-  - 美国(yfuye.com免费节点)_41
-  - 🇺🇸_US_美国_8-4Wy1
-  - 🇷🇺_RU_俄罗斯
+  - 美国节点_1 (557ms)
+  - 🇸🇦_SA_沙特阿拉伯_1
+  - 伊朗
+  - 🇺🇸_US_美国
+  - 美国
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -124,23 +102,21 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yfuye.com免费节点)_24
-  - 英国(yfuye.com免费节点)_2
-  - 加拿大(yfuye.com免费节点)
-  - 美国(yfuye.com免费节点)_41
-  - 🇺🇸_US_美国_8-4Wy1
-  - 🇷🇺_RU_俄罗斯
+  - 美国节点_1 (557ms)
+  - 🇸🇦_SA_沙特阿拉伯_1
+  - 伊朗
+  - 🇺🇸_US_美国
+  - 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国(yfuye.com免费节点)_24
-  - 英国(yfuye.com免费节点)_2
-  - 加拿大(yfuye.com免费节点)
-  - 美国(yfuye.com免费节点)_41
-  - 🇺🇸_US_美国_8-4Wy1
-  - 🇷🇺_RU_俄罗斯
+  - 美国节点_1 (557ms)
+  - 🇸🇦_SA_沙特阿拉伯_1
+  - 伊朗
+  - 🇺🇸_US_美国
+  - 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
