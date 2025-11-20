@@ -30,8 +30,8 @@ import warnings
 warnings.filterwarnings('ignore')
 from requests_html import HTMLSession
 
-# TEST_URL = "http://www.gstatic.com/generate_204"
-TEST_URL = "https://api.telegram.org"
+TEST_URL = "http://www.gstatic.com/generate_204"
+# TEST_URL = "https://api.telegram.org"
 CLASH_API_PORTS = [9090]
 CLASH_API_HOST = "127.0.0.1"
 CLASH_API_SECRET = ""
