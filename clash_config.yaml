@@ -33,6 +33,19 @@ dns:
     - 0.0.0.0/32
 proxies:
 - type: vless
+  name: 香港节点
+  server: 47.76.218.163
+  port: 443
+  uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
+  network: ws
+  servername: vless3.datatestvless.click
+  tls: true
+  encryption: none
+  ws-opts:
+    path: /?ed=2560&Telegram🇨🇳+@WangCai2
+    headers:
+      Host: vless3.datatestvless.click
+- type: vless
   name: 日本节点_1
   server: 150.230.107.25
   port: 8443
@@ -79,6 +92,20 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
 - type: vless
+  name: 🇸🇦_SA_沙特阿拉伯_1 (289ms)
+  server: 77.110.101.240
+  port: 443
+  uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
+  network: tcp
+  servername: kinopoisk.ru
+  tls: true
+  encryption: none
+  reality-opts:
+    public-key: 4Y3V5AIralE3HIAYXCe3beUGsUiBei0mCmbhPXGAgHg
+    short-id: 2fc1abafec7cb87b
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- type: vless
   name: 美国节点
   server: 178.239.123.216
   port: 24443
@@ -91,26 +118,13 @@ proxies:
     path: /?ed=2560&Telegram@freecodes
     headers:
       Host: vless3.datatestvless.click
-- type: vless
-  name: 伊朗
-  server: 213.176.16.74
-  port: 443
-  uuid: d7fbe279896e40118c23d15fe537dddd
-  network: tcp
-  servername: apple.com
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc
-    short-id: aabbccdd
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- type: ss
-  name: 美国节点_1 (213ms)
-  server: 81.90.29.126
-  port: 53672
-  cipher: chacha20-ietf-poly1305
-  password: yprgZbB7xDL4PSvE4wJU4m
+- type: hysteria2
+  name: 法国节点丨yoyapai.com
+  server: 163.172.21.105
+  port: 5355
+  password: dongtaiwang.com
+  skip-cert-verify: true
+  sni: www.bing.com
 - type: trojan
   name: 新加坡节点_1
   server: 116.49.237.130
@@ -120,12 +134,6 @@ proxies:
   sni: t.me/ripaojiedian
   skip-cert-verify: true
   tls: true
-- type: hysteria2
-  name: 美国
-  server: 51.81.223.22
-  port: 30102
-  password: 338ce171-d764-4610-8fd5-6688b0d321f0
-  skip-cert-verify: true
 - type: vless
   name: 🇳🇱_NL_荷兰
   server: ru.shvurgceo.online
@@ -154,6 +162,12 @@ proxies:
     path: Telegram🇨🇳 @WangCai2 /?ed=2560
     headers:
       Host: gaosir.unfeeling.sbs
+- type: ss
+  name: 美国节点丨yoyapai.com_3
+  server: 213.159.66.206
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
 - name: 🇯🇵 日本
   server: 153.121.65.212
   port: 5156
@@ -175,6 +189,13 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
+- name: 🇭🇰 香港3|@stairnode
+  server: 58.152.18.124
+  port: 443
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇭🇰 香港5|@stairnode
   server: 58.152.25.241
   port: 443
@@ -189,16 +210,9 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇯🇵 日本3|@stairnode
-  server: 153.121.39.240
-  port: 1334
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡2|@stairnode
-  server: 160.16.138.24
-  port: 127
+- name: 🇸🇬 新加坡|@stairnode
+  server: 160.16.106.144
+  port: 5553
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
@@ -210,13 +224,6 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇺🇸 美国|@stairnode
-  server: 160.16.138.24
-  port: 2890
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 proxy-groups:
 - name: 节点选择
   type: select
@@ -229,25 +236,25 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (213ms)
+  - 🇸🇦_SA_沙特阿拉伯_1 (289ms)
   - 🇸🇦_SA_沙特阿拉伯
-  - 伊朗
+  - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国
-  - 美国
-  - 🇯🇵 日本3|@stairnode
   - 🇯🇵 日本
-  - 日本节点_3
-  - 日本节点_2
-  - 日本节点_1
   - 🇯🇵 日本|@stairnode
-  - 🇭🇰 香港5|@stairnode
+  - 日本节点_2
+  - 日本节点_3
+  - 日本节点_1
+  - 美国节点丨yoyapai.com_3
+  - 香港节点
   - 🇸🇬 新加坡
-  - 新加坡节点_1
-  - 美国节点
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸 美国|@stairnode
+  - 新加坡节点_1
   - 🇳🇱_NL_荷兰
+  - 美国节点
   - 🇸🇬 新加坡3|@stairnode
   url: http://www.pinterest.com
   interval: 300
@@ -256,50 +263,50 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国节点_1 (213ms)
+  - 🇸🇦_SA_沙特阿拉伯_1 (289ms)
   - 🇸🇦_SA_沙特阿拉伯
-  - 伊朗
+  - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国
-  - 美国
-  - 🇯🇵 日本3|@stairnode
   - 🇯🇵 日本
-  - 日本节点_3
-  - 日本节点_2
-  - 日本节点_1
   - 🇯🇵 日本|@stairnode
-  - 🇭🇰 香港5|@stairnode
+  - 日本节点_2
+  - 日本节点_3
+  - 日本节点_1
+  - 美国节点丨yoyapai.com_3
+  - 香港节点
   - 🇸🇬 新加坡
-  - 新加坡节点_1
-  - 美国节点
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸 美国|@stairnode
+  - 新加坡节点_1
   - 🇳🇱_NL_荷兰
+  - 美国节点
   - 🇸🇬 新加坡3|@stairnode
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国节点_1 (213ms)
+  - 🇸🇦_SA_沙特阿拉伯_1 (289ms)
   - 🇸🇦_SA_沙特阿拉伯
-  - 伊朗
+  - 法国节点丨yoyapai.com
   - 🇺🇸_US_美国
-  - 美国
-  - 🇯🇵 日本3|@stairnode
   - 🇯🇵 日本
-  - 日本节点_3
-  - 日本节点_2
-  - 日本节点_1
   - 🇯🇵 日本|@stairnode
-  - 🇭🇰 香港5|@stairnode
+  - 日本节点_2
+  - 日本节点_3
+  - 日本节点_1
+  - 美国节点丨yoyapai.com_3
+  - 香港节点
   - 🇸🇬 新加坡
-  - 新加坡节点_1
-  - 美国节点
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸 美国|@stairnode
+  - 新加坡节点_1
   - 🇳🇱_NL_荷兰
+  - 美国节点
   - 🇸🇬 新加坡3|@stairnode
 rules:
 - DOMAIN,app.adjust.com,DIRECT
