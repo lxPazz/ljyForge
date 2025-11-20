@@ -14,7 +14,7 @@ import string
 import httpx
 import asyncio
 from itertools import chain
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 import sys
 import requests
 import zipfile
