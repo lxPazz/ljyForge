@@ -2355,6 +2355,7 @@ def work(links,check=False,allowed_types=[],only_check=False):
 
 if __name__ == '__main__':
     links = [
-        "https://yoyapai.com/mianfeijiedian/{Ymd}-clash-vpnmf-jie-dian-yoyapai.com.yaml"
+        "https://yoyapai.com/mianfeijiedian/{Ymd}-clash-vpnmf-jie-dian-yoyapai.com.yaml",
+        "https://free.datiya.com/uploads/{Ymd}-clash.yaml"
     ]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
