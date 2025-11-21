@@ -45,60 +45,26 @@ proxies:
     path: /websocketpl
     headers:
       Host: cdn.filterai.ru
-- type: vless
-  name: 🇸🇦_SA_沙特阿拉伯_1
-  server: 77.110.119.225
-  port: 443
-  uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a
-  network: tcp
-  servername: st.ozone.ru
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo
-    short-id: 07e904766d29b958
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- type: ss
-  name: 俄罗斯节点丨yoyapai.com
-  server: 45.14.245.2
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
-- type: vless
-  name: 伊朗
-  server: 213.176.16.74
-  port: 443
-  uuid: d7fbe279896e40118c23d15fe537dddd
-  network: tcp
-  servername: apple.com
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: XNL_xB1Spd09CQQQGnjeMPPK6_tPnFuYI_nLKk3EiWc
-    short-id: aabbccdd
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- type: hysteria2
-  name: 香港节点_3
-  server: xg1.mangshe.xyz
-  port: 2056
-  password: 78c2bad7-f5f3-41f2-88cc-81de9d05040b
-  skip-cert-verify: true
-  sni: xg1.mangshe.xyz
 - type: ss
   name: 美国节点丨yoyapai.com_2
   server: 213.159.66.206
   port: 443
   cipher: chacha20-ietf-poly1305
   password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
-- type: ss
-  name: 美国丨yoyapai.com (34ms)
-  server: pupas-shirting-unsung.freesocks.work
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: p78naCf2EfOlRSLTX0wFVx
-- name: 🇯🇵 日本
+- type: vless
+  name: 美国
+  server: 210.87.111.61
+  port: 39738
+  uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
+  network: ws
+  servername: vless3.datatestvless.click
+  tls: true
+  encryption: none
+  ws-opts:
+    path: /?ed=2560&telegram🇨🇳@wangcai2
+    headers:
+      Host: vless3.datatestvless.click
+- name: 🇯🇵 日本 (341ms)
   server: 160.16.82.24
   port: 2145
   type: trojan
@@ -112,13 +78,6 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇭🇰 香港4|@stairnode
-  server: 58.152.18.95
-  port: 443
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
 - name: 🇯🇵 日本|@stairnode
   server: 153.121.51.221
   port: 1821
@@ -126,34 +85,6 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇯🇵 日本2|@stairnode
-  server: 160.16.204.136
-  port: 1331
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇯🇵 日本3|@stairnode
-  server: 54.199.75.230
-  port: 1331
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡|@stairnode
-  server: 160.16.214.6
-  port: 2760
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡2|@stairnode
-  server: 160.16.89.176
-  port: 2760
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇺🇸 美国|@stairnode
   server: 160.16.89.176
   port: 702
@@ -168,8 +99,8 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇬🇧 英国|@stairnode
-  server: 144.217.164.29
+- name: 🇺🇸 美国4|@stairnode
+  server: 15.204.247.49
   port: 12000
   type: ss
   cipher: aes-256-gcm
@@ -186,24 +117,15 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国丨yoyapai.com (34ms)
-  - 香港节点_3
-  - 俄罗斯节点丨yoyapai.com
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本
+  - 🇯🇵 日本 (341ms)
   - 🇯🇵 日本|@stairnode
-  - 🇬🇧 英国|@stairnode
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 🇭🇰 香港4|@stairnode
   - 🇸🇬 新加坡
   - 俄罗斯节点
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国2|@stairnode
+  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国|@stairnode
+  - 美国
+  - 🇺🇸 美国4|@stairnode
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -211,47 +133,29 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国丨yoyapai.com (34ms)
-  - 香港节点_3
-  - 俄罗斯节点丨yoyapai.com
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本
+  - 🇯🇵 日本 (341ms)
   - 🇯🇵 日本|@stairnode
-  - 🇬🇧 英国|@stairnode
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 🇭🇰 香港4|@stairnode
   - 🇸🇬 新加坡
   - 俄罗斯节点
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国2|@stairnode
+  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国|@stairnode
+  - 美国
+  - 🇺🇸 美国4|@stairnode
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国丨yoyapai.com (34ms)
-  - 香港节点_3
-  - 俄罗斯节点丨yoyapai.com
-  - 🇯🇵 日本2|@stairnode
-  - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本
+  - 🇯🇵 日本 (341ms)
   - 🇯🇵 日本|@stairnode
-  - 🇬🇧 英国|@stairnode
-  - 🇸🇦_SA_沙特阿拉伯_1
-  - 伊朗
-  - 🇭🇰 香港4|@stairnode
   - 🇸🇬 新加坡
   - 俄罗斯节点
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国2|@stairnode
+  - 美国节点丨yoyapai.com_2
   - 🇺🇸 美国|@stairnode
+  - 美国
+  - 🇺🇸 美国4|@stairnode
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
