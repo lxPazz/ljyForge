@@ -32,13 +32,6 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇭🇰 香港4
-  server: 58.152.18.95
-  port: 443
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
 - name: 🇭🇰 香港5
   server: 58.152.25.241
   port: 443
@@ -46,6 +39,20 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
+- name: 🇯🇵 日本
+  server: 153.121.51.221
+  port: 1821
+  type: trojan
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
+- name: 🇯🇵 日本2
+  server: 160.16.204.136
+  port: 1331
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡
   server: 160.16.214.6
   port: 2760
@@ -80,12 +87,6 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: 8JCsPssfgS8tiRwiMlhARg==
-- name: 🇺🇸 美国4
-  server: 15.204.247.49
-  port: 12000
-  type: ss
-  cipher: aes-256-gcm
-  password: 8JCsPssfgS8tiRwiMlhARg==
 - type: vless
   name: 🇸🇦_SA_沙特阿拉伯
   server: 77.110.119.225
@@ -99,19 +100,6 @@ proxies:
     short-id: 07e904766d29b958
   client-fingerprint: chrome
   flow: xtls-rprx-vision
-- type: vless
-  name: 🇷🇺_RU_俄罗斯_1
-  server: 81.161.98.228
-  port: 1443
-  uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a
-  network: ws
-  servername: cdn.filterai.ru
-  tls: true
-  ws-opts:
-    path: /websocketpl
-    headers:
-      Host: cdn.filterai.ru
-  client-fingerprint: chrome
 - type: vless
   name: 🇷🇺_RU_俄罗斯_3
   server: 147.45.234.51
@@ -127,13 +115,6 @@ proxies:
     spider-x: /
   client-fingerprint: chrome
   flow: xtls-rprx-vision
-- name: 🇯🇵 日本|@stairnode
-  server: 160.16.233.76
-  port: 4012
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
 - name: 🇯🇵 日本3|@stairnode
   server: 160.16.136.130
   port: 1331
@@ -148,6 +129,13 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
+- name: 🇸🇬 新加坡3|@stairnode
+  server: 116.49.237.130
+  port: 1691
+  type: trojan
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
 - name: 🇺🇸 美国|@stairnode
   server: 160.16.196.59
   port: 2890
@@ -162,7 +150,7 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇺🇸 美国4|@stairnode (134ms)
+- name: 🇺🇸 美国4|@stairnode (237ms)
   server: 82.198.246.97
   port: 180
   type: vmess
@@ -183,20 +171,19 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸 美国4|@stairnode (134ms)
-  - 🇺🇸 美国4
+  - 🇺🇸 美国4|@stairnode (237ms)
   - 🇸🇦_SA_沙特阿拉伯
   - 🇬🇧 英国
   - 🇷🇺_RU_俄罗斯_3
+  - 🇯🇵 日本2
   - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇷🇺_RU_俄罗斯_1
+  - 🇯🇵 日本
   - 🇭🇰 香港5
-  - 🇭🇰 香港4
-  - 🇺🇸 美国2
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇸🇬 新加坡
   - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡
+  - 🇺🇸 美国2
   - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国2|@stairnode
   - 🇺🇸 美国
@@ -207,20 +194,19 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸 美国4|@stairnode (134ms)
-  - 🇺🇸 美国4
+  - 🇺🇸 美国4|@stairnode (237ms)
   - 🇸🇦_SA_沙特阿拉伯
   - 🇬🇧 英国
   - 🇷🇺_RU_俄罗斯_3
+  - 🇯🇵 日本2
   - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇷🇺_RU_俄罗斯_1
+  - 🇯🇵 日本
   - 🇭🇰 香港5
-  - 🇭🇰 香港4
-  - 🇺🇸 美国2
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇸🇬 新加坡
   - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡
+  - 🇺🇸 美国2
   - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国2|@stairnode
   - 🇺🇸 美国
@@ -229,20 +215,19 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
-  - 🇺🇸 美国4|@stairnode (134ms)
-  - 🇺🇸 美国4
+  - 🇺🇸 美国4|@stairnode (237ms)
   - 🇸🇦_SA_沙特阿拉伯
   - 🇬🇧 英国
   - 🇷🇺_RU_俄罗斯_3
+  - 🇯🇵 日本2
   - 🇯🇵 日本3|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇷🇺_RU_俄罗斯_1
+  - 🇯🇵 日本
   - 🇭🇰 香港5
-  - 🇭🇰 香港4
-  - 🇺🇸 美国2
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇸🇬 新加坡
   - 🇸🇬 新加坡|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡
+  - 🇺🇸 美国2
   - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国2|@stairnode
   - 🇺🇸 美国
