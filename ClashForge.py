@@ -1814,7 +1814,7 @@ if __name__ == '__main__':
     links = [
         "https://yoyapai.com/mianfeijiedian/{Ymd}-clash-vpnmf-jie-dian-yoyapai.com.yaml",
         "https://free.datiya.com/uploads/{Ymd}-clash.yaml",
-        "https://node.clash-x.com/uploads/{Y}/{m}/0-{Ymd}.yaml"
+        "https://node.clash-x.com/uploads/{Y}/{m}/0-{Ymd}.yaml",
         "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml",
         "http://wanzhuanmi.cczzuu.top/node/{Ymd}-clash.yaml"
     ]
