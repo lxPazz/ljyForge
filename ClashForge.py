@@ -33,7 +33,7 @@ from requests_html import HTMLSession
 # ================= 配置区域 =================
 TEST_URL = "http://www.gstatic.com/generate_204"
 # Cloudflare 测速文件 (25MB)
-SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=25000000" 
+SPEED_TEST_URL = "http://cachefly.cachefly.net/100mb.test"
 CLASH_API_PORTS = [9090]
 CLASH_API_HOST = "127.0.0.1"
 CLASH_PROXY_PORT = 7890 # Clash 代理端口
