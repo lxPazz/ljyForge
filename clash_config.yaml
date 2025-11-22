@@ -1,161 +1,401 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
 allow-lan: true
-mode: rule
-log-level: info
-external-controller: 127.0.0.1:9090
-geodata-mode: true
-geox-url:
-  geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat
-  mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
 dns:
-  enable: true
-  ipv6: false
   default-nameserver:
   - 223.5.5.5
   - 119.29.29.29
+  enable: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  use-hosts: true
-  nameserver:
-  - https://doh.pub/dns-query
-  - https://dns.alidns.com/dns-query
   fallback:
   - https://doh.dns.sb/dns-query
   - https://dns.cloudflare.com/dns-query
-  - https://dns.twnic.tw/dns-query
   - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     ipcidr:
     - 240.0.0.0/4
     - 0.0.0.0/32
+  ipv6: false
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  use-hosts: true
+external-controller: 127.0.0.1:9090
+geodata-mode: true
+geox-url:
+  geoip: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat
+  mmdb: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-Country.mmdb
+log-level: info
+mode: rule
+port: 7890
 proxies:
-- type: vless
-  name: 俄罗斯节点
-  server: 81.161.98.228
-  port: 1443
-  uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a
-  network: ws
-  servername: cdn.filterai.ru
-  tls: true
-  encryption: none
-  ws-opts:
-    path: /websocketpl
-    headers:
-      Host: cdn.filterai.ru
-- type: ss
-  name: 美国节点丨yoyapai.com_2
-  server: 213.159.66.206
+- cipher: aes-256-cfb
+  name: tg频道:@freenodedaily
+  password: amazonskr05
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: pl2XtR0pzwknQOGwewbwXtPYDw1zn9Vu
-- type: vless
-  name: 美国
-  server: 210.87.111.61
-  port: 39738
-  uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
-  network: ws
-  servername: vless3.datatestvless.click
-  tls: true
-  encryption: none
-  ws-opts:
-    path: /?ed=2560&telegram🇨🇳@wangcai2
-    headers:
-      Host: vless3.datatestvless.click
-- name: 🇯🇵 日本 (341ms)
-  server: 160.16.82.24
-  port: 2145
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡
-  server: 160.16.106.144
-  port: 5553
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇯🇵 日本|@stairnode
-  server: 153.121.51.221
-  port: 1821
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
-- name: 🇺🇸 美国|@stairnode
-  server: 160.16.89.176
-  port: 702
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2|@stairnode
-  server: 160.16.204.136
-  port: 2890
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国4|@stairnode
-  server: 15.204.247.49
-  port: 12000
+  server: 3.9.17.198
   type: ss
-  cipher: aes-256-gcm
+- alterId: 2
+  cipher: auto
+  name: 🇭🇰 香港
+  network: ws
+  port: 30809
+  server: v9.heduian.link
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  ws-opts:
+    headers:
+      Host: baidu.com
+    path: /oooo
+- cipher: aes-256-gcm
+  name: 🇭🇰 香港2
+  password: ccf426f1fe78
+  plugin: v2ray-plugin
+  plugin-opts:
+    host: newroot2v1.dsjsapp.com
+    mode: websocket
+    mux: true
+    path: /zksuapgx
+    skip-cert-verify: false
+    tls: true
+  port: 443
+  server: 103.103.245.158
+  type: ss
+- name: 🇭🇰 香港3
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 443
+  server: 58.152.18.124
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇭🇰 香港4
+  password: BxceQaOe
+  port: 443
+  server: 58.152.18.95
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇭🇰 香港5
+  password: BxceQaOe
+  port: 443
+  server: 58.152.25.241
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇯🇵 日本
+  password: BxceQaOe
+  port: 1821
+  server: 153.121.51.221
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇯🇵 日本2
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 1331
+  server: 160.16.204.136
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇯🇵 日本3
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 1331
+  server: 54.199.75.230
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇯🇵 日本4
+  port: 3304
+  server: 113.57.36.148
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: f0305e21-30bb-32f9-9b1b-9e02dcf3af54
+- name: 🇸🇬 新加坡
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 2760
+  server: 160.16.214.6
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇸🇬 新加坡2
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 2760
+  server: 160.16.89.176
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇸🇬 新加坡3
+  password: BxceQaOe
+  port: 381
+  server: 116.49.237.130
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇺🇸 美国
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 702
+  server: 160.16.89.176
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇺🇸 美国2
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 2890
+  server: 160.16.204.136
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇺🇸 美国3
+  password: BxceQaOe
+  port: 2773
+  server: 18.162.123.55
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- cipher: aes-256-gcm
+  name: 🇩🇪 德国
   password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 57.128.214.100
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇬🇧 英国
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 144.217.164.29
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇺🇸 美国4
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  port: 12000
+  server: 15.204.247.49
+  type: ss
+- name: 🇭🇰 香港3|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 443
+  server: 58.152.18.98
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇭🇰 香港5|@stairnode
+  password: BxceQaOe
+  port: 443
+  server: 58.152.53.22
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇹🇼 台湾|@stairnode
+  password: cb794089-728d-4171-9b69-846abb413309
+  port: 39695
+  server: 118.253.180.20
+  type: ss
+- name: 🇯🇵 日本|@stairnode
+  password: BxceQaOe
+  port: 4012
+  server: 160.16.233.76
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇯🇵 日本2|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 3169
+  server: 160.16.124.55
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇯🇵 日本3|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 1331
+  server: 160.16.136.130
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- cipher: chacha20-ietf-poly1305
+  name: 🇯🇵 日本4|@stairnode
+  password: cb794089-728d-4171-9b69-846abb413309
+  port: 39693
+  server: 118.253.180.20
+  type: ss
+- name: 🇸🇬 新加坡|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 2760
+  server: 160.16.223.205
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇸🇬 新加坡2|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 5552
+  server: 160.16.136.130
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇸🇬 新加坡3|@stairnode
+  password: BxceQaOe
+  port: 1691
+  server: 116.49.237.130
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- name: 🇺🇸 美国|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 2890
+  server: 160.16.196.59
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇺🇸 美国2|@stairnode
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  port: 702
+  server: 160.16.124.55
+  skip-cert-verify: false
+  sni: www.nintendogames.net
+  type: trojan
+- name: 🇺🇸 美国3|@stairnode
+  password: BxceQaOe
+  port: 2773
+  server: 95.40.7.3
+  skip-cert-verify: true
+  sni: t.me%2Fripaojiedian
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: 🇺🇸 美国4|@stairnode
+  port: 180
+  server: 82.198.246.97
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
 proxy-groups:
 - name: 节点选择
-  type: select
   proxies:
   - 自动选择
   - 故障转移
   - DIRECT
   - 手动选择
-- name: 自动选择
-  type: url-test
-  exclude-filter: (?i)中国|China|CN|电信|移动|联通
-  proxies:
-  - 🇯🇵 日本 (341ms)
-  - 🇯🇵 日本|@stairnode
-  - 🇸🇬 新加坡
-  - 俄罗斯节点
-  - 🇺🇸 美国2|@stairnode
-  - 美国节点丨yoyapai.com_2
-  - 🇺🇸 美国|@stairnode
-  - 美国
-  - 🇺🇸 美国4|@stairnode
-  url: http://www.pinterest.com
-  interval: 300
-  tolerance: 50
-- name: 故障转移
-  type: fallback
-  exclude-filter: (?i)中国|China|CN|电信|移动|联通
-  proxies:
-  - 🇯🇵 日本 (341ms)
-  - 🇯🇵 日本|@stairnode
-  - 🇸🇬 新加坡
-  - 俄罗斯节点
-  - 🇺🇸 美国2|@stairnode
-  - 美国节点丨yoyapai.com_2
-  - 🇺🇸 美国|@stairnode
-  - 美国
-  - 🇺🇸 美国4|@stairnode
-  url: http://www.gstatic.com/generate_204
-  interval: 300
-- name: 手动选择
   type: select
+- exclude-filter: (?i)中国|China|CN|电信|移动|联通
+  interval: 300
+  name: 自动选择
   proxies:
-  - 🇯🇵 日本 (341ms)
-  - 🇯🇵 日本|@stairnode
+  - tg频道:@freenodedaily
+  - 🇭🇰 香港
+  - 🇭🇰 香港2
+  - 🇭🇰 香港3
+  - 🇭🇰 香港4
+  - 🇭🇰 香港5
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
+  - 🇯🇵 日本4
   - 🇸🇬 新加坡
-  - 俄罗斯节点
-  - 🇺🇸 美国2|@stairnode
-  - 美国节点丨yoyapai.com_2
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡3
+  - 🇺🇸 美国
+  - 🇺🇸 美国2
+  - 🇺🇸 美国3
+  - 🇩🇪 德国
+  - 🇬🇧 英国
+  - 🇺🇸 美国4
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇹🇼 台湾|@stairnode
+  - 🇯🇵 日本|@stairnode
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本4|@stairnode
+  - 🇸🇬 新加坡|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡3|@stairnode
   - 🇺🇸 美国|@stairnode
-  - 美国
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国3|@stairnode
   - 🇺🇸 美国4|@stairnode
+  tolerance: 50
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+- exclude-filter: (?i)中国|China|CN|电信|移动|联通
+  interval: 300
+  name: 故障转移
+  proxies:
+  - tg频道:@freenodedaily
+  - 🇭🇰 香港
+  - 🇭🇰 香港2
+  - 🇭🇰 香港3
+  - 🇭🇰 香港4
+  - 🇭🇰 香港5
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
+  - 🇯🇵 日本4
+  - 🇸🇬 新加坡
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡3
+  - 🇺🇸 美国
+  - 🇺🇸 美国2
+  - 🇺🇸 美国3
+  - 🇩🇪 德国
+  - 🇬🇧 英国
+  - 🇺🇸 美国4
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇹🇼 台湾|@stairnode
+  - 🇯🇵 日本|@stairnode
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本4|@stairnode
+  - 🇸🇬 新加坡|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇺🇸 美国|@stairnode
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国3|@stairnode
+  - 🇺🇸 美国4|@stairnode
+  type: fallback
+  url: http://www.gstatic.com/generate_204
+- name: 手动选择
+  proxies:
+  - tg频道:@freenodedaily
+  - 🇭🇰 香港
+  - 🇭🇰 香港2
+  - 🇭🇰 香港3
+  - 🇭🇰 香港4
+  - 🇭🇰 香港5
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
+  - 🇯🇵 日本4
+  - 🇸🇬 新加坡
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡3
+  - 🇺🇸 美国
+  - 🇺🇸 美国2
+  - 🇺🇸 美国3
+  - 🇩🇪 德国
+  - 🇬🇧 英国
+  - 🇺🇸 美国4
+  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港5|@stairnode
+  - 🇹🇼 台湾|@stairnode
+  - 🇯🇵 日本|@stairnode
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本4|@stairnode
+  - 🇸🇬 新加坡|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇺🇸 美国|@stairnode
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国3|@stairnode
+  - 🇺🇸 美国4|@stairnode
+  type: select
+redir-port: 7892
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
@@ -1252,3 +1492,4 @@ rules:
 - IP-CIDR6,fd00::/8,DIRECT,no-resolve
 - GEOIP,CN,DIRECT
 - MATCH,节点选择
+socks-port: 7891
