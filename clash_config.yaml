@@ -39,16 +39,16 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇯🇵 日本
-  server: 160.16.233.76
-  port: 4012
+- name: 🇭🇰 香港5
+  server: 58.152.53.22
+  port: 443
   type: trojan
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇸🇬 新加坡
-  server: 160.16.223.205
-  port: 2760
+- name: 🇯🇵 日本3
+  server: 160.16.136.130
+  port: 1331
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
@@ -66,22 +66,6 @@ proxies:
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2
-  server: 160.16.124.55
-  port: 702
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国4
-  server: 82.198.246.97
-  port: 180
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
   skip-cert-verify: false
 - type: vless
   name: 🇸🇦_SA_沙特阿拉伯
@@ -115,11 +99,40 @@ proxies:
     headers:
       Host: joss.gpj1.web.id
 - type: ss
-  name: 🇮🇪_IE_爱尔兰_1 (208ms)
+  name: 🇮🇪_IE_爱尔兰_1 (143ms)
   server: 34.245.193.205
   port: 443
   cipher: aes-256-cfb
   password: amazonskr05
+- type: ss
+  name: 🇩🇪_DE_德国
+  server: 46.183.184.60
+  port: 989
+  cipher: aes-256-cfb
+  password: f8f7aCzcPKbsF8p3
+- type: trojan
+  name: 🇬🇧_GB_英国
+  server: 109.169.76.23
+  port: 443
+  password: d69e725c-7c7e-4c75-9786-4859b4e0bbc6
+  network: ws
+  sni: joss.gpj1.web.id
+  tls: true
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/109.169.76.23=443
+    headers:
+      Host: joss.gpj1.web.id
+- type: vless
+  name: 🇺🇸_US_美国_3
+  server: usa.fastlynew.hosting-ip.com
+  port: 80
+  uuid: b7c88dc6-1513-49c0-be12-1cfe37bcd25b
+  network: ws
+  servername: cd123.global.ssl.fastly.net
+  ws-opts:
+    path: /
+    headers:
+      Host: cd123.global.ssl.fastly.net
 - name: 🇭🇰 香港3|@stairnode
   server: 58.152.110.92
   port: 443
@@ -147,9 +160,9 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
-- name: 🇸🇬 新加坡2|@stairnode
-  server: 18.177.138.138
-  port: 127
+- name: 🇺🇸 美国|@stairnode
+  server: 160.16.81.84
+  port: 2890
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
@@ -166,21 +179,22 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (208ms)
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本
-  - 🇺🇸 美国4
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇯🇵 日本3|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4
-  - 🇸🇬 新加坡3
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸_US_美国
+  - 🇮🇪_IE_爱尔兰_1 (143ms)
   - 🇮🇪_IE_爱尔兰
-  - 🇺🇸 美国2
+  - 🇩🇪_DE_德国
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇬🇧_GB_英国
+  - 🇰🇷 韩国|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本|@stairnode
+  - 🇭🇰 香港4
+  - 🇺🇸_US_美国
+  - 🇺🇸_US_美国_3
+  - 🇭🇰 香港5
+  - 🇸🇬 新加坡3
+  - 🇭🇰 香港3|@stairnode
+  - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国
   url: http://www.pinterest.com
   interval: 300
@@ -189,42 +203,44 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (208ms)
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本
-  - 🇺🇸 美国4
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇯🇵 日本3|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4
-  - 🇸🇬 新加坡3
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸_US_美国
+  - 🇮🇪_IE_爱尔兰_1 (143ms)
   - 🇮🇪_IE_爱尔兰
-  - 🇺🇸 美国2
+  - 🇩🇪_DE_德国
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇬🇧_GB_英国
+  - 🇰🇷 韩国|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本|@stairnode
+  - 🇭🇰 香港4
+  - 🇺🇸_US_美国
+  - 🇺🇸_US_美国_3
+  - 🇭🇰 香港5
+  - 🇸🇬 新加坡3
+  - 🇭🇰 香港3|@stairnode
+  - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (208ms)
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本|@stairnode
-  - 🇯🇵 日本
-  - 🇺🇸 美国4
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇯🇵 日本3|@stairnode
-  - 🇭🇰 香港3|@stairnode
-  - 🇭🇰 香港4
-  - 🇸🇬 新加坡3
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇺🇸_US_美国
+  - 🇮🇪_IE_爱尔兰_1 (143ms)
   - 🇮🇪_IE_爱尔兰
-  - 🇺🇸 美国2
+  - 🇩🇪_DE_德国
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇬🇧_GB_英国
+  - 🇰🇷 韩国|@stairnode
+  - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本|@stairnode
+  - 🇭🇰 香港4
+  - 🇺🇸_US_美国
+  - 🇺🇸_US_美国_3
+  - 🇭🇰 香港5
+  - 🇸🇬 新加坡3
+  - 🇭🇰 香港3|@stairnode
+  - 🇺🇸 美国|@stairnode
   - 🇺🇸 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
