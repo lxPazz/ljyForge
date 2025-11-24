@@ -32,6 +32,13 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
+- name: 🇭🇰 香港3
+  server: 58.152.110.92
+  port: 443
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇭🇰 香港4
   server: 58.152.18.95
   port: 443
@@ -39,16 +46,36 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇭🇰 香港5
-  server: 58.152.53.22
-  port: 443
+- name: 🇯🇵 日本
+  server: 153.121.51.147
+  port: 5156
   type: trojan
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
+- name: 🇯🇵 日本2
+  server: 160.16.81.84
+  port: 3169
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇯🇵 日本3
-  server: 160.16.136.130
+  server: 160.16.81.84
   port: 1331
+  type: trojan
+  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇰🇷 韩国
+  server: 141.164.45.187
+  port: 7001
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: 🇸🇬 新加坡
+  server: 153.121.51.29
+  port: 2760
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
@@ -61,110 +88,88 @@ proxies:
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
 - name: 🇺🇸 美国
-  server: 160.16.196.59
+  server: 160.16.81.84
   port: 2890
   type: trojan
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
+- name: 🇺🇸 美国4 (133ms)
+  server: 82.198.246.97
+  port: 180
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
 - type: vless
-  name: 🇸🇦_SA_沙特阿拉伯
-  server: 77.110.119.225
+  name: 🇯🇵_JP_日本
+  server: 18.183.89.240
   port: 443
-  uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a
-  network: tcp
-  servername: st.ozone.ru
+  uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+  network: ws
+  servername: kuangbao.xiejiang.dpdns.org
   tls: true
-  reality-opts:
-    public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo
-    short-id: 07e904766d29b958
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- type: ss
-  name: 🇮🇪_IE_爱尔兰
-  server: 3.252.162.214
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kuangbao.xiejiang.dpdns.org
 - type: trojan
-  name: 🇺🇸_US_美国
-  server: 38.180.72.162
-  port: 2053
-  password: eb7339c5-70e4-4c7b-b5ef-4128adc8136a
+  name: 🇷🇺_RU_俄罗斯
+  server: 89.110.120.197
+  port: 443
+  password: 35f8e682-54bd-42c7-b537-94a8e4c84bcd
   network: ws
   sni: joss.gpj1.web.id
   tls: true
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/38.180.72.162=2053
+    path: /Free-VPN-CF-Geo-Project/89.110.120.197=443
     headers:
       Host: joss.gpj1.web.id
-- type: ss
-  name: 🇮🇪_IE_爱尔兰_1 (143ms)
-  server: 34.245.193.205
+- type: vless
+  name: 🇯🇵_JP_日本_1
+  server: 52.68.194.189
   port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-- type: ss
-  name: 🇩🇪_DE_德国
-  server: 46.183.184.60
-  port: 989
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
+  uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+  network: ws
+  servername: kuangbao.xiejiang.dpdns.org
+  tls: true
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kuangbao.xiejiang.dpdns.org
 - type: trojan
-  name: 🇬🇧_GB_英国
-  server: 109.169.76.23
+  name: 🇨🇭_CH_瑞士_1
+  server: 138.124.30.8
   port: 443
-  password: d69e725c-7c7e-4c75-9786-4859b4e0bbc6
+  password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
   network: ws
   sni: joss.gpj1.web.id
   tls: true
   ws-opts:
-    path: /Free-VPN-CF-Geo-Project/109.169.76.23=443
+    path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
     headers:
       Host: joss.gpj1.web.id
-- type: vless
-  name: 🇺🇸_US_美国_3
-  server: usa.fastlynew.hosting-ip.com
-  port: 80
-  uuid: b7c88dc6-1513-49c0-be12-1cfe37bcd25b
-  network: ws
-  servername: cd123.global.ssl.fastly.net
-  ws-opts:
-    path: /
-    headers:
-      Host: cd123.global.ssl.fastly.net
 - name: 🇭🇰 香港3|@stairnode
   server: 58.152.110.92
   port: 443
   type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇯🇵 日本|@stairnode
-  server: 153.121.51.147
-  port: 5156
+- name: 🇸🇬 新加坡2|@stairnode
+  server: 160.16.236.32
+  port: 2760
   type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
-- name: 🇯🇵 日本3|@stairnode
-  server: 160.16.81.84
-  port: 1331
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇰🇷 韩国|@stairnode
-  server: 141.164.45.187
-  port: 7001
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
 - name: 🇺🇸 美国|@stairnode
-  server: 160.16.81.84
+  server: 3.113.21.213
   port: 2890
   type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
+  password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
 proxy-groups:
@@ -179,22 +184,22 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (143ms)
-  - 🇮🇪_IE_爱尔兰
-  - 🇩🇪_DE_德国
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇬🇧_GB_英国
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本3|@stairnode
+  - 🇺🇸 美国4 (133ms)
+  - 🇰🇷 韩国
+  - 🇷🇺_RU_俄罗斯
+  - 🇯🇵_JP_日本
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
   - 🇯🇵 日本3
-  - 🇯🇵 日本|@stairnode
+  - 🇯🇵_JP_日本_1
+  - 🇨🇭_CH_瑞士_1
+  - 🇭🇰 香港3
   - 🇭🇰 香港4
-  - 🇺🇸_US_美国
-  - 🇺🇸_US_美国_3
-  - 🇭🇰 香港5
-  - 🇸🇬 新加坡3
   - 🇭🇰 香港3|@stairnode
+  - 🇸🇬 新加坡3
   - 🇺🇸 美国|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
   - 🇺🇸 美国
   url: http://www.pinterest.com
   interval: 300
@@ -203,44 +208,44 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (143ms)
-  - 🇮🇪_IE_爱尔兰
-  - 🇩🇪_DE_德国
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇬🇧_GB_英国
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本3|@stairnode
+  - 🇺🇸 美国4 (133ms)
+  - 🇰🇷 韩国
+  - 🇷🇺_RU_俄罗斯
+  - 🇯🇵_JP_日本
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
   - 🇯🇵 日本3
-  - 🇯🇵 日本|@stairnode
+  - 🇯🇵_JP_日本_1
+  - 🇨🇭_CH_瑞士_1
+  - 🇭🇰 香港3
   - 🇭🇰 香港4
-  - 🇺🇸_US_美国
-  - 🇺🇸_US_美国_3
-  - 🇭🇰 香港5
-  - 🇸🇬 新加坡3
   - 🇭🇰 香港3|@stairnode
+  - 🇸🇬 新加坡3
   - 🇺🇸 美国|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
   - 🇺🇸 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇮🇪_IE_爱尔兰_1 (143ms)
-  - 🇮🇪_IE_爱尔兰
-  - 🇩🇪_DE_德国
-  - 🇸🇦_SA_沙特阿拉伯
-  - 🇬🇧_GB_英国
-  - 🇰🇷 韩国|@stairnode
-  - 🇯🇵 日本3|@stairnode
+  - 🇺🇸 美国4 (133ms)
+  - 🇰🇷 韩国
+  - 🇷🇺_RU_俄罗斯
+  - 🇯🇵_JP_日本
+  - 🇯🇵 日本
+  - 🇯🇵 日本2
   - 🇯🇵 日本3
-  - 🇯🇵 日本|@stairnode
+  - 🇯🇵_JP_日本_1
+  - 🇨🇭_CH_瑞士_1
+  - 🇭🇰 香港3
   - 🇭🇰 香港4
-  - 🇺🇸_US_美国
-  - 🇺🇸_US_美国_3
-  - 🇭🇰 香港5
-  - 🇸🇬 新加坡3
   - 🇭🇰 香港3|@stairnode
+  - 🇸🇬 新加坡3
   - 🇺🇸 美国|@stairnode
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
   - 🇺🇸 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
