@@ -73,13 +73,6 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
-- name: 🇸🇬 新加坡
-  server: 153.121.51.29
-  port: 2760
-  type: trojan
-  password: dd2f25b4c70689de8bc0f7fa9d6591cb
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇸🇬 新加坡3
   server: 116.49.237.130
   port: 1691
@@ -94,7 +87,7 @@ proxies:
   password: dd2f25b4c70689de8bc0f7fa9d6591cb
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇺🇸 美国4 (133ms)
+- name: 🇺🇸 美国4 (22ms)
   server: 82.198.246.97
   port: 180
   type: vmess
@@ -103,6 +96,16 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: false
+- type: trojan
+  name: 🇺🇸_US_美国
+  server: 104.25.254.4
+  port: 2087
+  password: d0298536-d670-4045-bbb1-ddd5ea68683e
+  network: ws
+  sni: azadnet-bdr.pages.dev
+  tls: true
+  ws-opts:
+    path: /azadnet-bdr.pages.dev/?ed=2560&PROT_TYPE=trojan
 - type: vless
   name: 🇯🇵_JP_日本
   server: 18.183.89.240
@@ -139,6 +142,36 @@ proxies:
     path: /?ed=2560
     headers:
       Host: kuangbao.xiejiang.dpdns.org
+- type: vless
+  name: 🇸🇦_SA_沙特阿拉伯
+  server: 77.110.119.225
+  port: 443
+  uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a
+  network: tcp
+  servername: st.ozone.ru
+  tls: true
+  reality-opts:
+    public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo
+    short-id: 07e904766d29b958
+  client-fingerprint: chrome
+  flow: xtls-rprx-vision
+- type: vless
+  name: 🇷🇺_RU_俄罗斯_2
+  server: zcreat.ethervpn.fun
+  port: 8443
+  uuid: a47595a8-1add-401a-8189-e6799f8d8628
+  network: ws
+  servername: zcreat.ethervpn.fun
+  tls: true
+  encryption: none
+  ws-opts:
+    path: /websocketpl?ed=2047
+    headers:
+      Host: zcreat.ethervpn.fun
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
 - type: trojan
   name: 🇨🇭_CH_瑞士_1
   server: 138.124.30.8
@@ -154,6 +187,13 @@ proxies:
 - name: 🇭🇰 香港3|@stairnode
   server: 58.152.110.92
   port: 443
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇯🇵 日本2|@stairnode
+  server: 160.16.57.238
+  port: 3169
   type: trojan
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
@@ -184,23 +224,26 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸 美国4 (133ms)
+  - 🇺🇸 美国4 (22ms)
+  - 🇺🇸_US_美国
   - 🇰🇷 韩国
-  - 🇷🇺_RU_俄罗斯
-  - 🇯🇵_JP_日本
-  - 🇯🇵 日本
-  - 🇯🇵 日本2
   - 🇯🇵 日本3
+  - 🇯🇵 日本2
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本
   - 🇯🇵_JP_日本_1
-  - 🇨🇭_CH_瑞士_1
-  - 🇭🇰 香港3
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
+  - 🇷🇺_RU_俄罗斯
   - 🇺🇸 美国|@stairnode
+  - 🇭🇰 香港3|@stairnode
   - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇷🇺_RU_俄罗斯_2
   - 🇺🇸 美国
+  - 🇨🇭_CH_瑞士_1
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -208,45 +251,51 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸 美国4 (133ms)
+  - 🇺🇸 美国4 (22ms)
+  - 🇺🇸_US_美国
   - 🇰🇷 韩国
-  - 🇷🇺_RU_俄罗斯
-  - 🇯🇵_JP_日本
-  - 🇯🇵 日本
-  - 🇯🇵 日本2
   - 🇯🇵 日本3
+  - 🇯🇵 日本2
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本
   - 🇯🇵_JP_日本_1
-  - 🇨🇭_CH_瑞士_1
-  - 🇭🇰 香港3
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
+  - 🇷🇺_RU_俄罗斯
   - 🇺🇸 美国|@stairnode
+  - 🇭🇰 香港3|@stairnode
   - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇷🇺_RU_俄罗斯_2
   - 🇺🇸 美国
+  - 🇨🇭_CH_瑞士_1
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇺🇸 美国4 (133ms)
+  - 🇺🇸 美国4 (22ms)
+  - 🇺🇸_US_美国
   - 🇰🇷 韩国
-  - 🇷🇺_RU_俄罗斯
-  - 🇯🇵_JP_日本
-  - 🇯🇵 日本
-  - 🇯🇵 日本2
   - 🇯🇵 日本3
+  - 🇯🇵 日本2
+  - 🇯🇵 日本2|@stairnode
+  - 🇯🇵 日本
   - 🇯🇵_JP_日本_1
-  - 🇨🇭_CH_瑞士_1
-  - 🇭🇰 香港3
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港3|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
+  - 🇷🇺_RU_俄罗斯
   - 🇺🇸 美国|@stairnode
+  - 🇭🇰 香港3|@stairnode
   - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
+  - 🇸🇦_SA_沙特阿拉伯
+  - 🇷🇺_RU_俄罗斯_2
   - 🇺🇸 美国
+  - 🇨🇭_CH_瑞士_1
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
