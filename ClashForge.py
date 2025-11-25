@@ -2394,6 +2394,8 @@ if __name__ == '__main__':
         "https://free.datiya.com/uploads/{Ymd}-clash.yaml",
         "https://node.clash-x.com/uploads/{Y}/{m}/0-{Ymd}.yaml",
         "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml",
-        "http://wanzhuanmi.cczzuu.top/node/{Ymd}-clash.yaml"
+        "http://wanzhuanmi.cczzuu.top/node/{Ymd}-clash.yaml",
+        "https://www.85la.com/wp-content/uploads/2025/11/c21f969b5f03d33-4.yaml",
+        "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fproxy.v2gh.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FPawdroid%2FFree-servers%2Fmain%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true",
     ]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
