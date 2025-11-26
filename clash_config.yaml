@@ -32,6 +32,13 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
+- name: 🇭🇰 香港3
+  server: 58.152.110.120
+  port: 443
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇭🇰 香港4
   server: 58.152.18.95
   port: 443
@@ -53,6 +60,20 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
+- name: 🇯🇵 日本2
+  server: 160.16.131.243
+  port: 3169
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇯🇵 日本3
+  server: 160.16.107.37
+  port: 3093
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡2
   server: 202.181.103.246
   port: 127
@@ -67,6 +88,15 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
+- name: 🇺🇸 美国4
+  server: 82.198.246.97
+  port: 180
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
 - name: 🇻🇳 越南
   server: 103.186.155.110
   port: 38388
@@ -74,7 +104,7 @@ proxies:
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
 - type: vless
-  name: 🇺🇸_US_美国_2 (85ms)
+  name: 🇺🇸_US_美国_2
   server: 108.162.198.24
   port: 2096
   uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
@@ -110,7 +140,7 @@ proxies:
     headers:
       Host: kuangbao.xiejiang.dpdns.org
 - type: vless
-  name: 🇷🇺_RU_俄罗斯
+  name: 🇷🇺_RU_俄罗斯 (26ms)
   server: 193.124.18.13
   port: 443
   uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
@@ -161,13 +191,6 @@ proxies:
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇸🇬 新加坡|@stairnode
-  server: 160.16.116.227
-  port: 127
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇸🇬 新加坡2|@stairnode
   server: 160.16.240.91
   port: 2760
@@ -175,13 +198,6 @@ proxies:
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇸🇬 新加坡3|@stairnode
-  server: 43.198.91.31
-  port: 3579
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
 - name: 🇺🇸 美国|@stairnode
   server: 160.16.240.91
   port: 4054
@@ -189,25 +205,6 @@ proxies:
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇺🇸 美国2|@stairnode
-  server: 160.16.116.227
-  port: 4054
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国 V2CROSS.COM
-  server: 74.117.196.232
-  port: 37934
-  type: vmess
-  uuid: f1a513d2-c32a-49dc-8e64-d4f8a2f1e001
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /speedtest
 proxy-groups:
 - name: 节点选择
   type: select
@@ -220,28 +217,28 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸_US_美国_2 (85ms)
-  - 🇷🇺_RU_俄罗斯
-  - 🇺🇸 美国 V2CROSS.COM
+  - 🇷🇺_RU_俄罗斯 (26ms)
+  - 🇺🇸 美国4
+  - 🇺🇸_US_美国_2
   - 🇫🇷_FR_法国
+  - 🇩🇪_DE_德国
   - 🇯🇵 日本2|@stairnode
   - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 🇯🇵 日本
-  - 🇯🇵_JP_日本
   - 🇯🇵_JP_日本_1
-  - 🇻🇳 越南
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港5
-  - 🇭🇰 香港4|@stairnode
+  - 🇻🇳 越南
   - 🇭🇰 香港5|@stairnode
-  - 🇩🇪_DE_德国
+  - 🇭🇰 香港5
   - 🇸🇬 新加坡2|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
-  - 🇺🇸 美国2|@stairnode
+  - 🇭🇰 香港4|@stairnode
   - 🇺🇸 美国|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -249,55 +246,55 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇺🇸_US_美国_2 (85ms)
-  - 🇷🇺_RU_俄罗斯
-  - 🇺🇸 美国 V2CROSS.COM
+  - 🇷🇺_RU_俄罗斯 (26ms)
+  - 🇺🇸 美国4
+  - 🇺🇸_US_美国_2
   - 🇫🇷_FR_法国
+  - 🇩🇪_DE_德国
   - 🇯🇵 日本2|@stairnode
   - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 🇯🇵 日本
-  - 🇯🇵_JP_日本
   - 🇯🇵_JP_日本_1
-  - 🇻🇳 越南
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港5
-  - 🇭🇰 香港4|@stairnode
+  - 🇻🇳 越南
   - 🇭🇰 香港5|@stairnode
-  - 🇩🇪_DE_德国
+  - 🇭🇰 香港5
   - 🇸🇬 新加坡2|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
-  - 🇺🇸 美国2|@stairnode
+  - 🇭🇰 香港4|@stairnode
   - 🇺🇸 美国|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇺🇸_US_美国_2 (85ms)
-  - 🇷🇺_RU_俄罗斯
-  - 🇺🇸 美国 V2CROSS.COM
+  - 🇷🇺_RU_俄罗斯 (26ms)
+  - 🇺🇸 美国4
+  - 🇺🇸_US_美国_2
   - 🇫🇷_FR_法国
+  - 🇩🇪_DE_德国
   - 🇯🇵 日本2|@stairnode
   - 🇯🇵 日本3|@stairnode
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 🇯🇵 日本
-  - 🇯🇵_JP_日本
   - 🇯🇵_JP_日本_1
-  - 🇻🇳 越南
+  - 🇯🇵_JP_日本
   - 🇭🇰 香港4
-  - 🇭🇰 香港5
-  - 🇭🇰 香港4|@stairnode
+  - 🇻🇳 越南
   - 🇭🇰 香港5|@stairnode
-  - 🇩🇪_DE_德国
+  - 🇭🇰 香港5
   - 🇸🇬 新加坡2|@stairnode
   - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡|@stairnode
+  - 🇭🇰 香港3
   - 🇸🇬 新加坡3
-  - 🇺🇸 美国2|@stairnode
+  - 🇭🇰 香港4|@stairnode
   - 🇺🇸 美国|@stairnode
-  - 🇸🇬 新加坡3|@stairnode
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
