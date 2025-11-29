@@ -32,37 +32,9 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇯🇵 日本2
-  server: 153.121.39.240
-  port: 3093
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇯🇵 日本3
   server: 160.16.106.144
   port: 3169
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡
-  server: 160.16.132.158
-  port: 127
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡2
-  server: 160.16.106.144
-  port: 127
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2
-  server: 153.121.76.9
-  port: 2890
   type: trojan
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
@@ -150,35 +122,20 @@ proxies:
     headers:
       Host: us2.candyfans.win
   client-fingerprint: chrome
-- name: 🇸🇬 新加坡2|@stairnode
-  server: 160.16.89.176
-  port: 127
+- name: 🇻🇳 越南|@stairnode
+  server: 103.186.154.140
+  port: 38388
+  type: ss
+  cipher: aes-256-cfb
+  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+- name: 🇷🇺 俄罗斯 V2CROSS.COM
+  server: 37.18.14.33
+  port: 443
   type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡3|@stairnode
-  server: 43.199.161.175
-  port: 1196
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
+  password: Qzy7tgpRhu
+  sni: m.vk.com
   skip-cert-verify: true
-- name: 🇺🇸 美国|@stairnode
-  server: 160.16.204.136
-  port: 2890
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2|@stairnode
-  server: 160.16.89.176
-  port: 2890
-  type: trojan
-  password: 2cf6d686799e6fa95316394064f26c0a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇬🇧 英国 V2CROSS.COM (81ms)
+- name: 🇬🇧 英国 V2CROSS.COM (23ms)
   server: 82.198.246.97
   port: 180
   type: vmess
@@ -186,27 +143,6 @@ proxies:
   alterId: 0
   cipher: auto
   tls: false
-  skip-cert-verify: true
-- name: 🇺🇸 美国 V2CROSS.COM
-  server: 74.117.196.232
-  port: 37934
-  type: vmess
-  uuid: f1a513d2-c32a-49dc-8e64-d4f8a2f1e001
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /speedtest
-- name: 🇦🇺 澳大利亚 V2CROSS.COM
-  server: xray.kk37005.tk
-  port: 55919
-  type: vmess
-  uuid: 2e7548bb-7c5b-4d97-d64d-1b2fe4050089
-  alterId: 0
-  cipher: auto
-  tls: true
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
@@ -220,24 +156,16 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇨🇦_CA_加拿大
-  - 🇯🇵 日本2
+  - 🇬🇧 英国 V2CROSS.COM (23ms)
   - 🇯🇵 日本3
-  - 🇺🇸_US_美国_4
-  - 🇯🇵_JP_日本
   - 🇻🇳 越南
-  - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
   - 🇺🇸 美国 52
   - 🇺🇸_US_美国_3
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国 V2CROSS.COM
-  - 🇺🇸 美国2
-  - 🇺🇸 美国|@stairnode
-  - 🇦🇺 澳大利亚 V2CROSS.COM
-  - 🇸🇬 新加坡3|@stairnode
+  - 🇨🇦_CA_加拿大
+  - 🇷🇺 俄罗斯 V2CROSS.COM
+  - 🇺🇸_US_美国_4
+  - 🇯🇵_JP_日本
+  - 🇻🇳 越南|@stairnode
   - 🇬🇷_GR_希腊
   url: http://www.pinterest.com
   interval: 300
@@ -246,48 +174,32 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇨🇦_CA_加拿大
-  - 🇯🇵 日本2
+  - 🇬🇧 英国 V2CROSS.COM (23ms)
   - 🇯🇵 日本3
-  - 🇺🇸_US_美国_4
-  - 🇯🇵_JP_日本
   - 🇻🇳 越南
-  - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
   - 🇺🇸 美国 52
   - 🇺🇸_US_美国_3
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国 V2CROSS.COM
-  - 🇺🇸 美国2
-  - 🇺🇸 美国|@stairnode
-  - 🇦🇺 澳大利亚 V2CROSS.COM
-  - 🇸🇬 新加坡3|@stairnode
+  - 🇨🇦_CA_加拿大
+  - 🇷🇺 俄罗斯 V2CROSS.COM
+  - 🇺🇸_US_美国_4
+  - 🇯🇵_JP_日本
+  - 🇻🇳 越南|@stairnode
   - 🇬🇷_GR_希腊
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇨🇦_CA_加拿大
-  - 🇯🇵 日本2
+  - 🇬🇧 英国 V2CROSS.COM (23ms)
   - 🇯🇵 日本3
-  - 🇺🇸_US_美国_4
-  - 🇯🇵_JP_日本
   - 🇻🇳 越南
-  - 🇸🇬 新加坡2
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡
   - 🇺🇸 美国 52
   - 🇺🇸_US_美国_3
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国 V2CROSS.COM
-  - 🇺🇸 美国2
-  - 🇺🇸 美国|@stairnode
-  - 🇦🇺 澳大利亚 V2CROSS.COM
-  - 🇸🇬 新加坡3|@stairnode
+  - 🇨🇦_CA_加拿大
+  - 🇷🇺 俄罗斯 V2CROSS.COM
+  - 🇺🇸_US_美国_4
+  - 🇯🇵_JP_日本
+  - 🇻🇳 越南|@stairnode
   - 🇬🇷_GR_希腊
 rules:
 - DOMAIN,app.adjust.com,DIRECT
