@@ -32,6 +32,20 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
+- name: 🇯🇵 日本2
+  server: 153.121.39.240
+  port: 3093
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇯🇵 日本3
+  server: 160.16.106.144
+  port: 3169
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡
   server: 160.16.132.158
   port: 127
@@ -39,9 +53,16 @@ proxies:
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇺🇸 美国
+- name: 🇸🇬 新加坡2
+  server: 160.16.106.144
+  port: 127
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇺🇸 美国2
   server: 153.121.76.9
-  port: 4054
+  port: 2890
   type: trojan
   password: 2cf6d686799e6fa95316394064f26c0a
   sni: www.nintendogames.net
@@ -91,6 +112,18 @@ proxies:
     headers:
       Host: kuangbao.xiejiang.dpdns.org
 - type: vless
+  name: 🇺🇸_US_美国_3
+  server: 68.64.176.135
+  port: 443
+  uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
+  network: ws
+  servername: kuangbao.xiejiang.dpdns.org
+  tls: true
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: kuangbao.xiejiang.dpdns.org
+- type: vless
   name: 🇬🇷_GR_希腊
   server: ru01-ss01.tcp-reset-club.net
   port: 8443
@@ -117,13 +150,13 @@ proxies:
     headers:
       Host: us2.candyfans.win
   client-fingerprint: chrome
-- name: 🇯🇵 日本|@stairnode
-  server: 13.231.125.141
-  port: 4012
+- name: 🇸🇬 新加坡2|@stairnode
+  server: 160.16.89.176
+  port: 127
   type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇸🇬 新加坡3|@stairnode
   server: 43.199.161.175
   port: 1196
@@ -131,12 +164,20 @@ proxies:
   password: BxceQaOe
   sni: t.me%2Fripaojiedian
   skip-cert-verify: true
-- name: 🇻🇳 越南|@stairnode
-  server: 103.186.154.140
-  port: 38388
-  type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+- name: 🇺🇸 美国|@stairnode
+  server: 160.16.204.136
+  port: 2890
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 🇺🇸 美国2|@stairnode
+  server: 160.16.89.176
+  port: 2890
+  type: trojan
+  password: 2cf6d686799e6fa95316394064f26c0a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇬🇧 英国 V2CROSS.COM (81ms)
   server: 82.198.246.97
   port: 180
@@ -146,12 +187,26 @@ proxies:
   cipher: auto
   tls: false
   skip-cert-verify: true
-- name: 🇺🇸 美国 华盛顿Cogent通信公司
-  server: 38.96.254.102
-  port: 18509
-  type: trojan
-  password: .ie4rghJuMkcf0oF
-  sni: shoppingmall.electricbanana.click
+- name: 🇺🇸 美国 V2CROSS.COM
+  server: 74.117.196.232
+  port: 37934
+  type: vmess
+  uuid: f1a513d2-c32a-49dc-8e64-d4f8a2f1e001
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /speedtest
+- name: 🇦🇺 澳大利亚 V2CROSS.COM
+  server: xray.kk37005.tk
+  port: 55919
+  type: vmess
+  uuid: 2e7548bb-7c5b-4d97-d64d-1b2fe4050089
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
 proxy-groups:
 - name: 节点选择
@@ -166,18 +221,24 @@ proxy-groups:
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
   - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇺🇸 美国 华盛顿Cogent通信公司
   - 🇨🇦_CA_加拿大
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
   - 🇺🇸_US_美国_4
-  - 🇯🇵 日本|@stairnode
   - 🇯🇵_JP_日本
-  - 🇺🇸 美国 52
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国
-  - 🇬🇷_GR_希腊
   - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国 52
+  - 🇺🇸_US_美国_3
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国 V2CROSS.COM
+  - 🇺🇸 美国2
+  - 🇺🇸 美国|@stairnode
+  - 🇦🇺 澳大利亚 V2CROSS.COM
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇬🇷_GR_希腊
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -186,36 +247,48 @@ proxy-groups:
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
   - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇺🇸 美国 华盛顿Cogent通信公司
   - 🇨🇦_CA_加拿大
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
   - 🇺🇸_US_美国_4
-  - 🇯🇵 日本|@stairnode
   - 🇯🇵_JP_日本
-  - 🇺🇸 美国 52
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国
-  - 🇬🇷_GR_希腊
   - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国 52
+  - 🇺🇸_US_美国_3
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国 V2CROSS.COM
+  - 🇺🇸 美国2
+  - 🇺🇸 美国|@stairnode
+  - 🇦🇺 澳大利亚 V2CROSS.COM
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇬🇷_GR_希腊
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
   - 🇬🇧 英国 V2CROSS.COM (81ms)
-  - 🇺🇸 美国 华盛顿Cogent通信公司
   - 🇨🇦_CA_加拿大
+  - 🇯🇵 日本2
+  - 🇯🇵 日本3
   - 🇺🇸_US_美国_4
-  - 🇯🇵 日本|@stairnode
   - 🇯🇵_JP_日本
-  - 🇺🇸 美国 52
-  - 🇸🇬 新加坡
-  - 🇸🇬 新加坡3|@stairnode
-  - 🇺🇸 美国
-  - 🇬🇷_GR_希腊
   - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 🇸🇬 新加坡2
+  - 🇸🇬 新加坡2|@stairnode
+  - 🇸🇬 新加坡
+  - 🇺🇸 美国 52
+  - 🇺🇸_US_美国_3
+  - 🇺🇸 美国2|@stairnode
+  - 🇺🇸 美国 V2CROSS.COM
+  - 🇺🇸 美国2
+  - 🇺🇸 美国|@stairnode
+  - 🇦🇺 澳大利亚 V2CROSS.COM
+  - 🇸🇬 新加坡3|@stairnode
+  - 🇬🇷_GR_希腊
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
