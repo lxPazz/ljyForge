@@ -32,190 +32,78 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇭🇰 香港5
-  server: 58.152.25.242
-  port: 443
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
-- name: 🇭🇰 香港6
-  server: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com
-  port: 80
-  type: vmess
-  uuid: 87b31a02-172e-11ee-a11f-f23c913c8d2b
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fe3a9432-sv0xs0-sywkhi-1o4kv.hk3.p5pv.com
-- name: 🇸🇬 新加坡
-  server: 160.16.131.243
-  port: 127
+- name: 🇯🇵 日本2
+  server: 160.16.87.174
+  port: 3169
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇸🇬 新加坡3
-  server: 43.198.90.142
-  port: 2673
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
-- name: 🇺🇸 美国2
-  server: 160.16.131.243
-  port: 2890
-  type: trojan
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇻🇳 越南
-  server: 103.186.154.174
-  port: 38388
-  type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- type: vmess
-  name: 🇭🇰 香港家宽 182
-  server: 45e91290-t6uv40-tg8syu-1nyy5.hk3.p5pv.com
-  port: 80
-  uuid: 8f7cb770-1305-11ee-b107-f23c91cfbbc9
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- type: vmess
-  name: 🇭🇰 香港家宽 188
-  server: c9d5a7ad-t6uv40-t83wtx-2rrb.hk3.p5pv.com
-  port: 80
-  uuid: ba64cdc5-c79a-326d-8e63-6903be8183a1
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- type: vmess
-  name: _15
-  server: c92d9037-sunz40-suqjqq-1pr35.hk3.p5pv.com
-  port: 80
-  uuid: 6b7c1278-ff9d-11ee-84ca-f23c913c8d2b
-  alterId: 2
-  network: ws
-  cipher: auto
-- type: vmess
-  name: 🇭🇰 香港家宽 356
-  server: 5957b382-t6r5s0-t7r6w5-1ppvf.hk3.p5pv.com
-  port: 80
-  uuid: 8da5616c-8566-11ee-9a21-f23c9164ca5d
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- type: vmess
-  name: 🇭🇰 HK_105
-  server: d9864c5f-sv6hs0-sv75lj-1swf9.hk3.p5pv.com
-  port: 80
-  uuid: 2bb1edc8-fa5d-11ef-9dd9-f23c9164ca5d
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- type: vmess
-  name: 🇭🇰 HK_126
-  server: 4a9b5eb9-sva740-sveyey-44k4.hk3.p5pv.com
-  port: 80
-  uuid: c5eb2c2c-bc1d-11ed-a8bf-f23c91cfbbc9
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- type: vmess
-  name: 🇭🇰 HK_77
-  server: 3a0b963a-t02f40-tiuovf-v3c2.hk3.p5pv.com
-  port: 80
-  uuid: 5f091cbe-fb34-11ea-9777-f23c9164ca5d
-  alterId: 2
-  network: ws
-  cipher: auto
-  servername: broadcastlv.chat.bilibili.com
-  ws-opts:
-    path: /
-    headers:
-      Host: broadcastlv.chat.bilibili.com
-- name: 🇯🇵 日本3|@stairnode
+- name: 🇯🇵 日本3
   server: 160.16.72.33
   port: 3093
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇸🇬 新加坡|@stairnode
+- name: 🇸🇬 新加坡
   server: 153.121.44.99
   port: 507
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇸🇬 新加坡2|@stairnode
+- name: 🇸🇬 新加坡2
   server: 160.16.107.37
   port: 507
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 🇺🇸 美国|@stairnode
-  server: 153.121.39.240
-  port: 4054
-  type: trojan
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2|@stairnode
-  server: 160.16.116.227
-  port: 2890
-  type: trojan
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇻🇳 越南|@stairnode
+- name: 🇻🇳 越南
   server: 103.186.155.138
   port: 38388
   type: ss
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 美国(yudou6677.top 玉豆免费节点) 3 (96ms)
-  server: 82.198.246.97
-  port: 180
-  type: vmess
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
+- type: vless
+  name: 🇷🇺_RU_俄罗斯
+  server: 217.16.24.170
+  port: 8443
+  uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
+  network: tcp
+  servername: api-maps.yandex.ru
+  tls: true
+  encryption: none
+  reality-opts:
+    public-key: 8OsJx6xuHcpL_5e1w0U4bMBa-icevDgvvzNwPwZbORQ
+    short-id: 5540e44a53c3d01c
+  client-fingerprint: edge
+  flow: xtls-rprx-vision
+- type: ss
+  name: 🇫🇷_FR_法国_2
+  server: clr.ducks.tel
+  port: 17846
+  cipher: chacha20-ietf-poly1305
+  password: '907560230'
+- type: ss
+  name: 🇫🇷_FR_法国_4
+  server: clr.ducks.tel
+  port: 17844
+  cipher: chacha20-ietf-poly1305
+  password: '907560230'
+- type: ss
+  name: 🇬🇧_GB_英国 (199ms)
+  server: 82.38.31.218
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 美国(yudou6677.top 玉豆免费节点) 2
+  server: 103.106.3.82
+  port: 443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
   udp: true
 - name: 美国(yudou6677.top 玉豆免费节点) 16
   server: 23.95.75.146
@@ -231,13 +119,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: XeGAcwaviWxXzg87AwvnE6gWbhHHGwwB
   udp: true
-- name: 俄罗斯(yudou6677.top 玉豆免费节点)
-  server: 109.71.246.210
-  port: 56689
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: YQCSKoCF3QazW8YlvDBWA4
-  udp: true
 - name: 澳洲(yudou6677.top 玉豆免费节点)
   server: 95.111.222.113
   port: 443
@@ -252,6 +133,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
   udp: true
+- name: 英国(yudou6677.top 玉豆免费节点) 4
+  server: 82.38.31.179
+  port: 8080
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
@@ -264,31 +152,21 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 3 (96ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点)
+  - 🇬🇧_GB_英国 (199ms)
+  - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇯🇵 日本3|@stairnode
-  - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇭🇰 香港5
+  - 🇻🇳 越南
+  - 🇷🇺_RU_俄罗斯
+  - 🇸🇬 新加坡2
+  - 🇫🇷_FR_法国_2
   - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡3
-  - 🇺🇸 美国2
-  - 🇺🇸 美国2|@stairnode
-  - 🇭🇰 香港6
-  - 🇭🇰 HK_126
-  - 🇺🇸 美国|@stairnode
-  - 🇭🇰 HK_105
-  - _15
-  - 🇭🇰 HK_77
-  - 🇭🇰 香港家宽 188
-  - 🇭🇰 香港家宽 356
-  - 🇭🇰 香港家宽 182
+  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇫🇷_FR_法国_4
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -296,61 +174,41 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 3 (96ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点)
+  - 🇬🇧_GB_英国 (199ms)
+  - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇯🇵 日本3|@stairnode
-  - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇭🇰 香港5
+  - 🇻🇳 越南
+  - 🇷🇺_RU_俄罗斯
+  - 🇸🇬 新加坡2
+  - 🇫🇷_FR_法国_2
   - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡3
-  - 🇺🇸 美国2
-  - 🇺🇸 美国2|@stairnode
-  - 🇭🇰 香港6
-  - 🇭🇰 HK_126
-  - 🇺🇸 美国|@stairnode
-  - 🇭🇰 HK_105
-  - _15
-  - 🇭🇰 HK_77
-  - 🇭🇰 香港家宽 188
-  - 🇭🇰 香港家宽 356
-  - 🇭🇰 香港家宽 182
+  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇫🇷_FR_法国_4
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 3 (96ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点)
+  - 🇬🇧_GB_英国 (199ms)
+  - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇯🇵 日本3|@stairnode
-  - 🇻🇳 越南
-  - 🇻🇳 越南|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇯🇵 日本3
+  - 🇯🇵 日本2
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇭🇰 香港5
+  - 🇻🇳 越南
+  - 🇷🇺_RU_俄罗斯
+  - 🇸🇬 新加坡2
+  - 🇫🇷_FR_法国_2
   - 🇸🇬 新加坡
-  - 🇸🇬 新加坡2|@stairnode
-  - 🇸🇬 新加坡|@stairnode
-  - 🇸🇬 新加坡3
-  - 🇺🇸 美国2
-  - 🇺🇸 美国2|@stairnode
-  - 🇭🇰 香港6
-  - 🇭🇰 HK_126
-  - 🇺🇸 美国|@stairnode
-  - 🇭🇰 HK_105
-  - _15
-  - 🇭🇰 HK_77
-  - 🇭🇰 香港家宽 188
-  - 🇭🇰 香港家宽 356
-  - 🇭🇰 香港家宽 182
+  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇫🇷_FR_法国_4
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
