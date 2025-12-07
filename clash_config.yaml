@@ -32,23 +32,23 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇯🇵 日本2
-  server: 160.16.87.174
-  port: 3169
+- name: 🇭🇰 香港3
+  server: 58.152.110.154
+  port: 443
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
+- name: 🇭🇰 香港5
+  server: 58.152.25.242
+  port: 443
+  type: trojan
+  password: BxceQaOe
+  sni: t.me%2Fripaojiedian
+  skip-cert-verify: true
 - name: 🇯🇵 日本3
   server: 160.16.72.33
   port: 3093
-  type: trojan
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇸🇬 新加坡
-  server: 153.121.44.99
-  port: 507
   type: trojan
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
@@ -60,32 +60,19 @@ proxies:
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
+- name: 🇺🇸 美国
+  server: 153.121.39.240
+  port: 4054
+  type: trojan
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+  skip-cert-verify: false
 - name: 🇻🇳 越南
   server: 103.186.155.138
   port: 38388
   type: ss
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- type: vless
-  name: 🇷🇺_RU_俄罗斯
-  server: 217.16.24.170
-  port: 8443
-  uuid: a91e64f0-9295-499d-bf4a-661ad99d4938
-  network: tcp
-  servername: api-maps.yandex.ru
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: 8OsJx6xuHcpL_5e1w0U4bMBa-icevDgvvzNwPwZbORQ
-    short-id: 5540e44a53c3d01c
-  client-fingerprint: edge
-  flow: xtls-rprx-vision
-- type: ss
-  name: 🇫🇷_FR_法国_2
-  server: clr.ducks.tel
-  port: 17846
-  cipher: chacha20-ietf-poly1305
-  password: '907560230'
 - type: ss
   name: 🇫🇷_FR_法国_4
   server: clr.ducks.tel
@@ -93,7 +80,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: '907560230'
 - type: ss
-  name: 🇬🇧_GB_英国 (199ms)
+  name: 🇮🇷_IR_伊朗 (179ms)
+  server: 151.242.251.147
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: QCXDxuDlTTMD7jtgHUjIoj
+- type: ss
+  name: 🇬🇧_GB_英国
   server: 82.38.31.218
   port: 8080
   cipher: chacha20-ietf-poly1305
@@ -104,6 +97,16 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
+  udp: true
+- name: 美国(yudou6677.top 玉豆免费节点) 3
+  server: 82.198.246.97
+  port: 180
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
   udp: true
 - name: 美国(yudou6677.top 玉豆免费节点) 16
   server: 23.95.75.146
@@ -118,6 +121,13 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: XeGAcwaviWxXzg87AwvnE6gWbhHHGwwB
+  udp: true
+- name: 俄罗斯(yudou6677.top 玉豆免费节点)
+  server: 109.71.246.210
+  port: 56689
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: YQCSKoCF3QazW8YlvDBWA4
   udp: true
 - name: 澳洲(yudou6677.top 玉豆免费节点)
   server: 95.111.222.113
@@ -152,21 +162,23 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇬🇧_GB_英国 (199ms)
-  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇮🇷_IR_伊朗 (179ms)
+  - 俄罗斯(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 美国(yudou6677.top 玉豆免费节点) 16
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇯🇵 日本3
-  - 🇯🇵 日本2
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南
-  - 🇷🇺_RU_俄罗斯
-  - 🇸🇬 新加坡2
-  - 🇫🇷_FR_法国_2
-  - 🇸🇬 新加坡
+  - 澳洲(yudou6677.top 玉豆免费节点)
+  - 🇭🇰 香港3
+  - 🇭🇰 香港5
   - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇺🇸 美国
   - 🇫🇷_FR_法国_4
+  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇬🇧_GB_英国
+  - 🇸🇬 新加坡2
+  - 美国(yudou6677.top 玉豆免费节点) 3
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -174,41 +186,45 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 🇬🇧_GB_英国 (199ms)
-  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇮🇷_IR_伊朗 (179ms)
+  - 俄罗斯(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 美国(yudou6677.top 玉豆免费节点) 16
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇯🇵 日本3
-  - 🇯🇵 日本2
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南
-  - 🇷🇺_RU_俄罗斯
-  - 🇸🇬 新加坡2
-  - 🇫🇷_FR_法国_2
-  - 🇸🇬 新加坡
+  - 澳洲(yudou6677.top 玉豆免费节点)
+  - 🇭🇰 香港3
+  - 🇭🇰 香港5
   - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇺🇸 美国
   - 🇫🇷_FR_法国_4
+  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇬🇧_GB_英国
+  - 🇸🇬 新加坡2
+  - 美国(yudou6677.top 玉豆免费节点) 3
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 🇬🇧_GB_英国 (199ms)
-  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇮🇷_IR_伊朗 (179ms)
+  - 俄罗斯(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 18
-  - 美国(yudou6677.top 玉豆免费节点) 16
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇯🇵 日本3
-  - 🇯🇵 日本2
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南
-  - 🇷🇺_RU_俄罗斯
-  - 🇸🇬 新加坡2
-  - 🇫🇷_FR_法国_2
-  - 🇸🇬 新加坡
+  - 澳洲(yudou6677.top 玉豆免费节点)
+  - 🇭🇰 香港3
+  - 🇭🇰 香港5
   - 美国(yudou6677.top 玉豆免费节点) 2
+  - 🇺🇸 美国
   - 🇫🇷_FR_法国_4
+  - 英国(yudou6677.top 玉豆免费节点) 4
+  - 🇬🇧_GB_英国
+  - 🇸🇬 新加坡2
+  - 美国(yudou6677.top 玉豆免费节点) 3
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
