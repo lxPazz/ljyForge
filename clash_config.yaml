@@ -32,23 +32,9 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇯🇵 日本3
-  server: 153.121.73.102
-  port: 1331
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇸🇬 新加坡2
   server: 160.16.153.13
   port: 3145
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国
-  server: 160.16.106.144
-  port: 4054
   type: trojan
   password: 76d630f2af6619c4a5de0ef953df3c6a
   sni: www.nintendogames.net
@@ -60,7 +46,7 @@ proxies:
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
 - type: hysteria
-  name: 🇫🇷_FR_法国
+  name: 🇫🇷_FR_法国 (301ms)
   server: 195.154.200.40
   port: 15010
   auth-str: dongtaiwang.com
@@ -77,32 +63,21 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: q92MrrP9oJ3lMEzbQFpyuU
-- name: 🇺🇸 美国|@stairnode
-  server: 160.16.214.6
-  port: 2890
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2|@stairnode
-  server: 202.181.103.235
-  port: 2890
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇻🇳 越南|@stairnode
   server: 103.186.154.44
   port: 38388
   type: ss
   cipher: aes-256-cfb
   password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 美国(yudou6677.top 玉豆免费节点) 2
-  server: 103.106.3.82
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
+- name: 美国(yudou6677.top 玉豆免费节点) 3
+  server: 82.198.246.97
+  port: 180
+  type: vmess
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
   udp: true
 - name: 美国(yudou6677.top 玉豆免费节点) 16
   server: 23.95.75.146
@@ -111,7 +86,7 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
   udp: true
-- name: 美国(yudou6677.top 玉豆免费节点) 18 (263ms)
+- name: 美国(yudou6677.top 玉豆免费节点) 18
   server: 89.46.233.148
   port: 443
   type: ss
@@ -125,13 +100,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: SVt6ZiWzRI1Yxeig4xBZwiJOt6ceXwGa
   udp: true
-- name: 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  server: 213.159.67.124
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
-  udp: true
 proxy-groups:
 - name: 节点选择
   type: select
@@ -144,20 +112,15 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 18 (263ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇫🇷_FR_法国 (301ms)
+  - 美国(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 18
+  - 🇸🇬 新加坡4|@stairnode
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇫🇷_FR_法国
-  - 🇯🇵 日本3
   - 🇻🇳 越南
   - 🇻🇳 越南|@stairnode
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇸🇬 新加坡4|@stairnode
   - 🇸🇬 新加坡2
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -165,39 +128,29 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 18 (263ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇫🇷_FR_法国 (301ms)
+  - 美国(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 18
+  - 🇸🇬 新加坡4|@stairnode
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇫🇷_FR_法国
-  - 🇯🇵 日本3
   - 🇻🇳 越南
   - 🇻🇳 越南|@stairnode
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇸🇬 新加坡4|@stairnode
   - 🇸🇬 新加坡2
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 美国(yudou6677.top 玉豆免费节点) 18 (263ms)
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
+  - 🇫🇷_FR_法国 (301ms)
+  - 美国(yudou6677.top 玉豆免费节点) 3
+  - 美国(yudou6677.top 玉豆免费节点) 18
+  - 🇸🇬 新加坡4|@stairnode
   - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇫🇷_FR_法国
-  - 🇯🇵 日本3
   - 🇻🇳 越南
   - 🇻🇳 越南|@stairnode
   - 澳洲(yudou6677.top 玉豆免费节点)
-  - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇸🇬 新加坡4|@stairnode
   - 🇸🇬 新加坡2
-  - 🇺🇸 美国2|@stairnode
-  - 🇺🇸 美国|@stairnode
-  - 🇺🇸 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
