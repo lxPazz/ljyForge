@@ -32,74 +32,126 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇻🇳 越南
-  server: 103.186.155.205
-  port: 38388
+- name: GB SS-01 | free-nodes
   type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- type: vless
-  name: 🇵🇱_PL_波兰
-  server: 185.136.132.171
-  port: 24170
-  uuid: fe21e399-ec6f-4cb5-8441-e911178665b1
+  server: 144.217.164.29
+  port: 12000
+  cipher: aes-256-gcm
+  password: 8JCsPssfgS8tiRwiMlhARg==
+  udp: true
+- name: 未知 SS-10 | free-nodes
+  type: ss
+  server: 193.135.174.135
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  udp: true
+- name: 🇯🇵 日本3|@ripaojiedian
+  type: trojan
+  server: 153.121.53.187
+  port: 3093
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 未知 TROJAN-475 | free-nodes
+  type: trojan
+  server: 160.16.130.66
+  port: 3093
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 未知 TROJAN-493 | free-nodes (113ms)
+  type: trojan
+  server: download2hkt.windowsupdate.lol
+  port: 443
+  password: af4d2493-9156-4514-9f6b-ee5d1a1e4713
+  sni: ''
+  skip-cert-verify: false
+- name: 未知 TROJAN-533 | free-nodes
+  type: trojan
+  server: 160.16.229.223
+  port: 3093
+  password: 76d630f2af6619c4a5de0ef953df3c6a
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 未知 TROJAN-548 | free-nodes
+  type: trojan
+  server: 153.121.38.213
+  port: 1331
+  password: 79314e99f0a473fe86efc7827942ad00
+  sni: www.nintendogames.net
+  skip-cert-verify: false
+- name: 4Jadi-48
+  type: ss
+  server: 144.126.146.38
+  port: 30100
+  cipher: chacha20-ietf-poly1305
+  password: 741ddced-e6ee-4175-9c1a-e524009f9045
+  udp: true
+- name: 🇭🇰HK(AzadNet.t.me)
+  type: vmess
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  sni: ''
+  ws-opts:
+    path: /arki?ed=2048
+    headers:
+      Host: ''
+- name: 🇽🇽XX(AzadNet.t.me)
+  type: vmess
+  server: 5.196.29.123
+  port: 2082
+  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  sni: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: google.com
+- name: 🇽🇽XX(AzadNet.t.me) (9)
+  type: vmess
+  server: 85.195.101.122
+  port: 40878
+  uuid: f3d4167e-b15e-4e46-82e9-9286ef93fda7
+  alterId: 0
+  cipher: auto
   network: tcp
-  servername: speedtest.net
-  tls: true
-  encryption: none
-  reality-opts:
-    public-key: VsmNi1ZMXVOwhCWpbCp51w-D_DzrxWX4jgfpcU0S9G4
-    short-id: 2fb2106a629b
-    spider-x: /
-  client-fingerprint: chrome
-- name: 🇻🇳 越南|@stairnode
-  server: 103.186.155.117
-  port: 38388
-  type: ss
-  cipher: aes-256-cfb
-  password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-- name: 美国(yudou6677.top 玉豆免费节点) 2
-  server: 103.106.3.82
+  tls: false
+  sni: ''
+  ws-opts: {}
+- name: 🇽🇽XX(AzadNet.t.me) (17)
+  type: vmess
+  server: 165.140.216.141
   port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 4SaCIazlgumYkM8FkPzlmwjpyWBDZFBk
-  udp: true
-- name: 美国(yudou6677.top 玉豆免费节点) 16
-  server: 23.95.75.146
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  sni: ''
+  ws-opts: {}
+- name: 🇽🇽XX(AzadNet.t.me) (19)
+  type: vmess
+  server: 209.126.84.189
   port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
-  udp: true
-- name: 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
-  server: 109.71.246.210
-  port: 56689
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: YQCSKoCF3QazW8YlvDBWA4
-  udp: true
-- name: 澳洲(yudou6677.top 玉豆免费节点)
-  server: 95.111.222.113
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: SVt6ZiWzRI1Yxeig4xBZwiJOt6ceXwGa
-  udp: true
-- name: 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  server: 213.159.67.124
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
-  udp: true
-- name: 英国(yudou6677.top 玉豆免费节点) 4
-  server: 82.38.31.179
-  port: 8080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
+  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  sni: ''
+  ws-opts:
+    path: /vmessws
+    headers:
+      Host: 209.126.84.189
 proxy-groups:
 - name: 节点选择
   type: select
@@ -112,15 +164,19 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
-  - 🇵🇱_PL_波兰
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇻🇳 越南
-  - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇻🇳 越南|@stairnode
-  - 英国(yudou6677.top 玉豆免费节点) 4
-  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 🇽🇽XX(AzadNet.t.me) (17)
+  - 🇽🇽XX(AzadNet.t.me) (9)
+  - 4Jadi-48
+  - 🇽🇽XX(AzadNet.t.me) (19)
+  - 🇽🇽XX(AzadNet.t.me)
+  - 🇭🇰HK(AzadNet.t.me)
+  - 未知 SS-10 | free-nodes
+  - 🇯🇵 日本3|@ripaojiedian
+  - 未知 TROJAN-533 | free-nodes
+  - 未知 TROJAN-475 | free-nodes
+  - 未知 TROJAN-548 | free-nodes
+  - GB SS-01 | free-nodes
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -128,29 +184,37 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
-  - 🇵🇱_PL_波兰
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇻🇳 越南
-  - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇻🇳 越南|@stairnode
-  - 英国(yudou6677.top 玉豆免费节点) 4
-  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 🇽🇽XX(AzadNet.t.me) (17)
+  - 🇽🇽XX(AzadNet.t.me) (9)
+  - 4Jadi-48
+  - 🇽🇽XX(AzadNet.t.me) (19)
+  - 🇽🇽XX(AzadNet.t.me)
+  - 🇭🇰HK(AzadNet.t.me)
+  - 未知 SS-10 | free-nodes
+  - 🇯🇵 日本3|@ripaojiedian
+  - 未知 TROJAN-533 | free-nodes
+  - 未知 TROJAN-475 | free-nodes
+  - 未知 TROJAN-548 | free-nodes
+  - GB SS-01 | free-nodes
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
-  - 🇵🇱_PL_波兰
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 美国(yudou6677.top 玉豆免费节点) 16
-  - 🇻🇳 越南
-  - 澳洲(yudou6677.top 玉豆免费节点)
-  - 🇻🇳 越南|@stairnode
-  - 英国(yudou6677.top 玉豆免费节点) 4
-  - 美国(yudou6677.top 玉豆免费节点) 2
+  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 🇽🇽XX(AzadNet.t.me) (17)
+  - 🇽🇽XX(AzadNet.t.me) (9)
+  - 4Jadi-48
+  - 🇽🇽XX(AzadNet.t.me) (19)
+  - 🇽🇽XX(AzadNet.t.me)
+  - 🇭🇰HK(AzadNet.t.me)
+  - 未知 SS-10 | free-nodes
+  - 🇯🇵 日本3|@ripaojiedian
+  - 未知 TROJAN-533 | free-nodes
+  - 未知 TROJAN-475 | free-nodes
+  - 未知 TROJAN-548 | free-nodes
+  - GB SS-01 | free-nodes
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
