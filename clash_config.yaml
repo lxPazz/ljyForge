@@ -32,20 +32,6 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 🇺🇸 美国
-  server: 160.16.236.32
-  port: 4054
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 🇺🇸 美国2
-  server: 153.121.51.29
-  port: 2890
-  type: trojan
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
 - name: 🇻🇳 越南
   server: 103.186.155.205
   port: 38388
@@ -66,13 +52,6 @@ proxies:
     short-id: 2fb2106a629b
     spider-x: /
   client-fingerprint: chrome
-- name: 🇯🇵 日本|@stairnode
-  server: 52.195.194.77
-  port: 1924
-  type: trojan
-  password: BxceQaOe
-  sni: t.me%2Fripaojiedian
-  skip-cert-verify: true
 - name: 🇻🇳 越南|@stairnode
   server: 103.186.155.117
   port: 38388
@@ -93,6 +72,13 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: NDRySIABARbErNIVsCNVkyYAHiBzhveT
   udp: true
+- name: 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
+  server: 109.71.246.210
+  port: 56689
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: YQCSKoCF3QazW8YlvDBWA4
+  udp: true
 - name: 澳洲(yudou6677.top 玉豆免费节点)
   server: 95.111.222.113
   port: 443
@@ -106,13 +92,6 @@ proxies:
   type: ss
   cipher: chacha20-ietf-poly1305
   password: mbhqsStnFQT1cTZYCdsmkugGUC6GT6rp
-  udp: true
-- name: 俄罗斯(yudou6677.top 玉豆免费节点) 4 (291ms)
-  server: 45.14.245.2
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 17ZDORWIliQHuO6WRGHChXYMzdRtAYVP
   udp: true
 - name: 英国(yudou6677.top 玉豆免费节点) 4
   server: 82.38.31.179
@@ -133,18 +112,15 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 4 (291ms)
-  - 🇯🇵 日本|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
+  - 🇵🇱_PL_波兰
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇻🇳 越南
-  - 🇵🇱_PL_波兰
+  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南|@stairnode
-  - 🇺🇸 美国2
   - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇺🇸 美国
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -152,35 +128,29 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 4 (291ms)
-  - 🇯🇵 日本|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
+  - 🇵🇱_PL_波兰
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇻🇳 越南
-  - 🇵🇱_PL_波兰
+  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南|@stairnode
-  - 🇺🇸 美国2
   - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇺🇸 美国
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
-  - 俄罗斯(yudou6677.top 玉豆免费节点) 4 (291ms)
-  - 🇯🇵 日本|@stairnode
+  - 俄罗斯(yudou6677.top 玉豆免费节点) (232ms)
+  - 🇵🇱_PL_波兰
   - 俄罗斯(yudou6677.top 玉豆免费节点) 3
-  - 澳洲(yudou6677.top 玉豆免费节点)
   - 美国(yudou6677.top 玉豆免费节点) 16
   - 🇻🇳 越南
-  - 🇵🇱_PL_波兰
+  - 澳洲(yudou6677.top 玉豆免费节点)
   - 🇻🇳 越南|@stairnode
-  - 🇺🇸 美国2
   - 英国(yudou6677.top 玉豆免费节点) 4
   - 美国(yudou6677.top 玉豆免费节点) 2
-  - 🇺🇸 美国
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
