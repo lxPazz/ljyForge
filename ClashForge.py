@@ -2390,14 +2390,10 @@ def work(links,check=False,allowed_types=[],only_check=False):
 
 if __name__ == '__main__':
     links = [
-        "https://yoyapai.com/mianfeijiedian/{Ymd}-clash-vpnmf-jie-dian-yoyapai.com.yaml",
-        "https://free.datiya.com/uploads/{Ymd}-clash.yaml",
-        "https://node.clash-x.com/uploads/{Y}/{m}/0-{Ymd}.yaml",
-        "https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml",
-        "http://wanzhuanmi.cczzuu.top/node/{Ymd}-clash.yaml",
-        "https://www.85la.com/wp-content/uploads/2025/11/c21f969b5f03d33-4.yaml",
-        "https://yy.yudou66.top/202511/2025.11.30Claj6sh.yaml",
-        "https://ylks.tt2000.sbs/2025/d7/g29/c.yaml",
-        "https://api.wcc.best/sub?target=clash&url=https%3A%2F%2Fproxy.v2gh.com%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2FPawdroid%2FFree-servers%2Fmain%2Fsub&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=false&tfo=false&scv=true&fdn=false&expand=true&sort=false&new_name=true",
+        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/1.txt",
+        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/2.txt",
+        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/3.txt"
     ]
+    base_url = "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/"
+    links = [f"{base_url}{i}.txt" for i in range(1, 31)]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
