@@ -46,33 +46,12 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
-- name: 🇯🇵 日本3|@ripaojiedian
-  type: trojan
-  server: 153.121.53.187
-  port: 3093
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 未知 TROJAN-475 | free-nodes
-  type: trojan
-  server: 160.16.130.66
-  port: 3093
-  password: 79314e99f0a473fe86efc7827942ad00
-  sni: www.nintendogames.net
-  skip-cert-verify: false
-- name: 未知 TROJAN-493 | free-nodes (113ms)
+- name: 未知 TROJAN-493 | free-nodes (113ms) (29ms)
   type: trojan
   server: download2hkt.windowsupdate.lol
   port: 443
   password: af4d2493-9156-4514-9f6b-ee5d1a1e4713
   sni: ''
-  skip-cert-verify: false
-- name: 未知 TROJAN-533 | free-nodes
-  type: trojan
-  server: 160.16.229.223
-  port: 3093
-  password: 76d630f2af6619c4a5de0ef953df3c6a
-  sni: www.nintendogames.net
   skip-cert-verify: false
 - name: 未知 TROJAN-548 | free-nodes
   type: trojan
@@ -88,20 +67,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 741ddced-e6ee-4175-9c1a-e524009f9045
   udp: true
-- name: 🇭🇰HK(AzadNet.t.me)
-  type: vmess
-  server: 47.244.120.197
-  port: 36703
-  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  sni: ''
-  ws-opts:
-    path: /arki?ed=2048
-    headers:
-      Host: ''
 - name: 🇽🇽XX(AzadNet.t.me)
   type: vmess
   server: 5.196.29.123
@@ -138,20 +103,6 @@ proxies:
   tls: false
   sni: ''
   ws-opts: {}
-- name: 🇽🇽XX(AzadNet.t.me) (19)
-  type: vmess
-  server: 209.126.84.189
-  port: 443
-  uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  sni: ''
-  ws-opts:
-    path: /vmessws
-    headers:
-      Host: 209.126.84.189
 proxy-groups:
 - name: 节点选择
   type: select
@@ -164,17 +115,12 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
   - 🇽🇽XX(AzadNet.t.me) (17)
   - 🇽🇽XX(AzadNet.t.me) (9)
   - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (19)
   - 🇽🇽XX(AzadNet.t.me)
-  - 🇭🇰HK(AzadNet.t.me)
   - 未知 SS-10 | free-nodes
-  - 🇯🇵 日本3|@ripaojiedian
-  - 未知 TROJAN-533 | free-nodes
-  - 未知 TROJAN-475 | free-nodes
   - 未知 TROJAN-548 | free-nodes
   - GB SS-01 | free-nodes
   url: http://www.pinterest.com
@@ -184,17 +130,12 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
-  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
   - 🇽🇽XX(AzadNet.t.me) (17)
   - 🇽🇽XX(AzadNet.t.me) (9)
   - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (19)
   - 🇽🇽XX(AzadNet.t.me)
-  - 🇭🇰HK(AzadNet.t.me)
   - 未知 SS-10 | free-nodes
-  - 🇯🇵 日本3|@ripaojiedian
-  - 未知 TROJAN-533 | free-nodes
-  - 未知 TROJAN-475 | free-nodes
   - 未知 TROJAN-548 | free-nodes
   - GB SS-01 | free-nodes
   url: http://www.gstatic.com/generate_204
@@ -202,17 +143,12 @@ proxy-groups:
 - name: 手动选择
   type: select
   proxies:
-  - 未知 TROJAN-493 | free-nodes (113ms)
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
   - 🇽🇽XX(AzadNet.t.me) (17)
   - 🇽🇽XX(AzadNet.t.me) (9)
   - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (19)
   - 🇽🇽XX(AzadNet.t.me)
-  - 🇭🇰HK(AzadNet.t.me)
   - 未知 SS-10 | free-nodes
-  - 🇯🇵 日本3|@ripaojiedian
-  - 未知 TROJAN-533 | free-nodes
-  - 未知 TROJAN-475 | free-nodes
   - 未知 TROJAN-548 | free-nodes
   - GB SS-01 | free-nodes
 rules:
