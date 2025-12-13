@@ -2175,7 +2175,7 @@ async def proxy_clean():
             else:
                 # 测试该组的所有节点
                 #results = await test_group_proxies(clash_api, proxies)
-                results = await test_group_proxies_robust(clash_api, proxies, times=5)
+                results = await test_group_proxies_robust(clash_api, proxies, times=1)
                 all_test_results.extend(results)
                 # 打印测试结果摘要
                 print_test_summary(group_name, results)
@@ -2390,10 +2390,6 @@ def work(links,check=False,allowed_types=[],only_check=False):
 
 if __name__ == '__main__':
     links = [
-        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/1.txt",
-        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/2.txt",
-        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/3.txt"
+        "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/1.txt"
     ]
-    base_url = "https://github.com/kort0881/vpn-key-vless/raw/refs/heads/main/githubmirror/"
-    links = [f"{base_url}{i}.txt" for i in range(1, 31)]
     work(links, check=True, only_check=False, allowed_types=["ss","hysteria2","hy2","vless","vmess","trojan"])
