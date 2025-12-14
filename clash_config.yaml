@@ -32,7 +32,7 @@ dns:
     - 240.0.0.0/4
     - 0.0.0.0/32
 proxies:
-- name: 未知 TROJAN-493 | free-nodes (113ms) (29ms)
+- name: 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
   type: trojan
   server: download2hkt.windowsupdate.lol
   port: 443
@@ -67,17 +67,6 @@ proxies:
     path: /
     headers:
       Host: google.com
-- name: 🇽🇽XX(AzadNet.t.me) (9)
-  type: vmess
-  server: 85.195.101.122
-  port: 40878
-  uuid: f3d4167e-b15e-4e46-82e9-9286ef93fda7
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  sni: ''
-  ws-opts: {}
 - name: 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
   type: vmess
   server: 165.140.216.141
@@ -101,12 +90,11 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
-  - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (9)
-  - 未知 TROJAN-548 | free-nodes
   - 🇽🇽XX(AzadNet.t.me)
+  - 4Jadi-48
+  - 未知 TROJAN-548 | free-nodes
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -114,23 +102,21 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
-  - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (9)
-  - 未知 TROJAN-548 | free-nodes
   - 🇽🇽XX(AzadNet.t.me)
+  - 4Jadi-48
+  - 未知 TROJAN-548 | free-nodes
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms)
-  - 4Jadi-48
-  - 🇽🇽XX(AzadNet.t.me) (9)
-  - 未知 TROJAN-548 | free-nodes
   - 🇽🇽XX(AzadNet.t.me)
+  - 4Jadi-48
+  - 未知 TROJAN-548 | free-nodes
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
