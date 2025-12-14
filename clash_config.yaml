@@ -46,28 +46,7 @@ proxies:
   password: 79314e99f0a473fe86efc7827942ad00
   sni: www.nintendogames.net
   skip-cert-verify: false
-- name: 4Jadi-48
-  type: ss
-  server: 144.126.146.38
-  port: 30100
-  cipher: chacha20-ietf-poly1305
-  password: 741ddced-e6ee-4175-9c1a-e524009f9045
-  udp: true
-- name: 🇽🇽XX(AzadNet.t.me)
-  type: vmess
-  server: 5.196.29.123
-  port: 2082
-  uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  sni: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: google.com
-- name: 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
+- name: 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms)
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -90,10 +69,8 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms)
   - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
-  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 🇽🇽XX(AzadNet.t.me)
-  - 4Jadi-48
   - 未知 TROJAN-548 | free-nodes
   url: http://www.pinterest.com
   interval: 300
@@ -102,20 +79,16 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms)
   - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
-  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 🇽🇽XX(AzadNet.t.me)
-  - 4Jadi-48
   - 未知 TROJAN-548 | free-nodes
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
+  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms)
   - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms)
-  - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms)
-  - 🇽🇽XX(AzadNet.t.me)
-  - 4Jadi-48
   - 未知 TROJAN-548 | free-nodes
 rules:
 - DOMAIN,app.adjust.com,DIRECT
