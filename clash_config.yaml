@@ -33,6 +33,7 @@ dns:
     - 0.0.0.0/32
 proxies:
 - name: 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms)
+    (97ms)
   type: trojan
   server: download2hkt.windowsupdate.lol
   port: 443
@@ -62,8 +63,8 @@ proxy-groups:
   type: url-test
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms) (97ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms)
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -71,15 +72,15 @@ proxy-groups:
   type: fallback
   exclude-filter: (?i)中国|China|CN|电信|移动|联通
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms) (97ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms)
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
   type: select
   proxies:
+  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms) (97ms)
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms)
-  - 未知 TROJAN-493 | free-nodes (113ms) (29ms) (13ms) (51ms) (87ms) (13ms) (10ms)
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
