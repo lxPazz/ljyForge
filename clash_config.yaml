@@ -34,7 +34,7 @@ dns:
 proxies:
 - name: 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms) (65ms)
     (151ms) (114ms) (31ms) (38ms) (64ms) (121ms) (65ms) (115ms) (70ms) (122ms) (120ms)
-    (173ms)
+    (173ms) (149ms)
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -59,6 +59,7 @@ proxy-groups:
   proxies:
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms) (65ms) (151ms)
     (114ms) (31ms) (38ms) (64ms) (121ms) (65ms) (115ms) (70ms) (122ms) (120ms) (173ms)
+    (149ms)
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -68,6 +69,7 @@ proxy-groups:
   proxies:
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms) (65ms) (151ms)
     (114ms) (31ms) (38ms) (64ms) (121ms) (65ms) (115ms) (70ms) (122ms) (120ms) (173ms)
+    (149ms)
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
@@ -75,6 +77,7 @@ proxy-groups:
   proxies:
   - 🇽🇽XX(AzadNet.t.me) (17) (117ms) (35ms) (22ms) (131ms) (24ms) (31ms) (65ms) (151ms)
     (114ms) (31ms) (38ms) (64ms) (121ms) (65ms) (115ms) (70ms) (122ms) (120ms) (173ms)
+    (149ms)
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
