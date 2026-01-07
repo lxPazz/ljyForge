@@ -37,7 +37,7 @@ proxies:
     (173ms) (149ms) (100ms) (124ms) (66ms) (108ms) (167ms) (23ms) (165ms) (158ms)
     (29ms) (29ms) (113ms) (71ms) (65ms) (29ms) (174ms) (128ms) (57ms) (161ms) (128ms)
     (29ms) (128ms) (123ms) (131ms) (161ms) (124ms) (122ms) (109ms) (160ms) (152ms)
-    (170ms) (65ms) (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms)
+    (170ms) (65ms) (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms) (156ms)
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -65,7 +65,7 @@ proxy-groups:
     (149ms) (100ms) (124ms) (66ms) (108ms) (167ms) (23ms) (165ms) (158ms) (29ms) (29ms)
     (113ms) (71ms) (65ms) (29ms) (174ms) (128ms) (57ms) (161ms) (128ms) (29ms) (128ms)
     (123ms) (131ms) (161ms) (124ms) (122ms) (109ms) (160ms) (152ms) (170ms) (65ms)
-    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms)
+    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms) (156ms)
   url: http://www.pinterest.com
   interval: 300
   tolerance: 50
@@ -78,7 +78,7 @@ proxy-groups:
     (149ms) (100ms) (124ms) (66ms) (108ms) (167ms) (23ms) (165ms) (158ms) (29ms) (29ms)
     (113ms) (71ms) (65ms) (29ms) (174ms) (128ms) (57ms) (161ms) (128ms) (29ms) (128ms)
     (123ms) (131ms) (161ms) (124ms) (122ms) (109ms) (160ms) (152ms) (170ms) (65ms)
-    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms)
+    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms) (156ms)
   url: http://www.gstatic.com/generate_204
   interval: 300
 - name: 手动选择
@@ -89,7 +89,7 @@ proxy-groups:
     (149ms) (100ms) (124ms) (66ms) (108ms) (167ms) (23ms) (165ms) (158ms) (29ms) (29ms)
     (113ms) (71ms) (65ms) (29ms) (174ms) (128ms) (57ms) (161ms) (128ms) (29ms) (128ms)
     (123ms) (131ms) (161ms) (124ms) (122ms) (109ms) (160ms) (152ms) (170ms) (65ms)
-    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms)
+    (30ms) (33ms) (166ms) (166ms) (32ms) (22ms) (166ms) (195ms) (156ms)
 rules:
 - DOMAIN,app.adjust.com,DIRECT
 - DOMAIN,bdtj.tagtic.cn,DIRECT
